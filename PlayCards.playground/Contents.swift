@@ -77,6 +77,11 @@ class MyTools {
     class func getWeightByID(card_id : Int) -> Int {
         return 0
     }
+    
+    //把卡牌数组按权值由小到大顺序排列（未施工）
+    class func order(cardList : Array<Card>) {
+        
+    }
 }
 
 //玩家类（暂定，可能有分机器人和人）
@@ -105,12 +110,16 @@ class CardBox {
         for i in 0..<52 {
             cardList.append(MyTools.getCardByID(card_id : i))
         }
-        self.shiffleCard()
+        self.shuffleCard()
     }
     
-    //洗牌(未施工)
-    func shiffleCard() {
-        
+    //洗牌
+    func shuffleCard() {
+        for _ in 0...100{
+            var a : Int = Int(arc4random() % 52 )
+            var tempCard : Card = cardList.remove(at: a)
+            cardList.append(tempCard)
+        }
     }
     
     //发牌
@@ -128,12 +137,24 @@ class CardBox {
 var cardBox = CardBox()
 var player = Person()
 
+//卡盒内所有的卡（乱序）
+for i in stride(from: 0, to: cardBox.cardList.count, by: 1) {
+    print("card_id: \(cardBox.cardList[i].card_id)")
+    print("card_color: \(cardBox.cardList[i].card_color)")
+    print("card_num: \(cardBox.cardList[i].card_num)")
+    print("card_weight: \(cardBox.cardList[i].card_weight)")
+    print("")
+}
+
+
+//给人发卡
 cardBox.dealCards(player: player, Nums: 1)
 for i in stride(from: 0, to: player.myCardList.count, by: 1) {
-    print(player.myCardList[0].card_id)
-    print(player.myCardList[0].card_color)
-    print(player.myCardList[0].card_num)
-    print(player.myCardList[0].card_weight)
+    print("My card id : \(player.myCardList[i].card_id)")
+    print("My card color : \(player.myCardList[i].card_color)")
+    print("My card num : \(player.myCardList[i].card_num)")
+    print("My card weight : \(player.myCardList[i].card_weight)")
+    print("")
 }
 
 
