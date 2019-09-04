@@ -5,6 +5,8 @@
 //
 //  0    1    2    3     4    5  。。。。
 //梅花1 方块1 红桃1 黑桃1 梅花2 方块2 。。。。
+// 52 小鬼王 53 大鬼王
+// 权值按3最小，JQK12大小鬼王
 /////////////////////////////////////////////////
 
 
@@ -16,7 +18,7 @@ class Card {
     var card_id : Int = 0                   //卡牌ID
     var card_color : String = ""             //卡牌花色
     var card_num : Int = 0                  //卡牌数字
-    var card_weight = 0                     //卡牌权值(未施工)
+    var card_weight = 0                     //卡牌权值
     init(cardId: Int , cardColor: String , cardNum: Int , cardWeight : Int) {
         self.card_id = cardId
         self.card_color = cardColor
@@ -39,11 +41,19 @@ class MyTools {
         return Card(cardId : card_id , cardColor : card_color , cardNum : card_num , cardWeight : card_weight)
     }
     
-    //由卡牌id获得卡牌数字
+    //由卡牌id获得卡牌花色
     class func getColorByID(card_id : Int) -> String {
-        if card_id < 0 || card_id > 51 {
-            //大小鬼王（未施工）
+        if card_id < 0 || card_id > 53 {
+            //错误
             return ""
+        }
+        else if card_id == 52 {
+            //小鬼王
+            return "BlackJoker"
+        }
+        else if card_id == 53 {
+            //大鬼王
+            return "RedJoker"
         }
         else {
             var temp : Int = card_id%4+1
@@ -62,25 +72,45 @@ class MyTools {
         }
     }
     
-    //由卡牌id获得卡牌花色
+    //由卡牌id获得卡牌数字
     class func getNumByID(card_id :Int) -> Int {
-        if card_id < 0 || card_id > 51 {
-            //大小鬼王（未施工）
+        if card_id < 0 || card_id > 53 {
+            //错误
             return -1
+        }
+        else if card_id == 52 || card_id == 53 {
+            //大小鬼王
+            return card_id
         }
         else {
             return (card_id/4)+1
         }
     }
     
-    //由卡牌id获得卡牌权值（未施工）
+    //由卡牌id获得卡牌权值
     class func getWeightByID(card_id : Int) -> Int {
-        return 0
+        if card_id < 0 || card_id > 53 {
+            //错误
+            return -1
+        }
+        else if card_id == 52 || card_id == 53 {
+            //大小鬼王
+            return card_id
+        }
+        else if 0 <= card_id && card_id <= 7 {
+            //1和2
+            return card_id+44
+        }
+        else {
+            return card_id-8
+        }
     }
     
-    //把卡牌数组按权值由小到大顺序排列（未施工）
-    class func order(cardList : Array<Card>) {
-        
+    //把卡牌数组按权值由小到大顺序排列
+    class func order(cardList : inout Array<Card>) {
+        cardList = cardList.sorted {    (a1 , a2) -> Bool in
+            return a1.card_weight < a2.card_weight
+        }
     }
 }
 
@@ -93,7 +123,7 @@ class Person {
         
     }
     
-    //拿牌（未施工完，暂定拿一张牌）
+    //拿牌
     func addCard(card : Card) {
         myCardList.append(card)
     }
@@ -105,9 +135,9 @@ class Person {
 class CardBox {
     var cardList: Array<Card> = []  //卡牌数组
     
-    //初始化，实例化52张牌并洗牌
+    //初始化，实例化54张牌并洗牌
     init() {
-        for i in 0..<52 {
+        for i in 0..<54 {
             cardList.append(MyTools.getCardByID(card_id : i))
         }
         self.shuffleCard()
@@ -116,7 +146,7 @@ class CardBox {
     //洗牌
     func shuffleCard() {
         for _ in 0...100{
-            var a : Int = Int(arc4random() % 52 )
+            var a : Int = Int(arc4random() % 13 )  //之前的52洗牌率好像有问题，前面很多按顺序的牌
             var tempCard : Card = cardList.remove(at: a)
             cardList.append(tempCard)
         }
@@ -138,25 +168,35 @@ var cardBox = CardBox()
 var player = Person()
 
 //卡盒内所有的卡（乱序）
-for i in stride(from: 0, to: cardBox.cardList.count, by: 1) {
-    print("card_id: \(cardBox.cardList[i].card_id)")
-    print("card_color: \(cardBox.cardList[i].card_color)")
-    print("card_num: \(cardBox.cardList[i].card_num)")
-    print("card_weight: \(cardBox.cardList[i].card_weight)")
+cardBox.cardList.forEach{ (c) in
+    print("card_id: \(c.card_id)")
+    print("card_color: \(c.card_color)")
+    print("card_num: \(c.card_num)")
+    print("card_weight: \(c.card_weight)")
     print("")
 }
 
 
 //给人发卡
-cardBox.dealCards(player: player, Nums: 1)
-for i in stride(from: 0, to: player.myCardList.count, by: 1) {
-    print("My card id : \(player.myCardList[i].card_id)")
-    print("My card color : \(player.myCardList[i].card_color)")
-    print("My card num : \(player.myCardList[i].card_num)")
-    print("My card weight : \(player.myCardList[i].card_weight)")
+cardBox.dealCards(player: player, Nums: 5)
+player.myCardList.forEach{ (c) in
+    print("My card id : \(c.card_id)")
+    print("My card color : \(c.card_color)")
+    print("My card num : \(c.card_num)")
+    print("My card weight : \(c.card_weight)")
     print("")
 }
 
+//我的卡排序后
+MyTools.order(cardList: &player.myCardList)
+print("排序后")
+player.myCardList.forEach{ (c) in
+    print("My card id : \(c.card_id)")
+    print("My card color : \(c.card_color)")
+    print("My card num : \(c.card_num)")
+    print("My card weight : \(c.card_weight)")
+    print("")
+}
 
 
 
