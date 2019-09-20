@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  project1
+//  SecondApp
 //
 //  Created by Apple on 2019/9/17.
-//  Copyright © 2019 Younger. All rights reserved.
+//  Copyright © 2019 Nic. All rights reserved.
 //
 
 import UIKit
