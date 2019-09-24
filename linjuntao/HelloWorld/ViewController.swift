@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         if ((nameText.text == "lin") && (passText.text == "123")) {
             res.isHidden = false
             res.text = "login successfully"
+            res.textColor = UIColor.black
         }else{
              res.isHidden = false
              res.text = "login failed,check your username and password!"
