@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,21 +20,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BLP-ZD-lE6">
-                                <rect key="frame" x="50" y="198.5" width="275" height="270.5"/>
+                                <rect key="frame" x="50" y="248.5" width="275" height="171"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fhc-IL-Tvn" userLabel="头像">
-                                        <rect key="frame" x="84.5" y="0.0" width="106" height="100.5"/>
+                                        <rect key="frame" x="137.5" y="0.0" width="0.0" height="0.0"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3hZ-fg-13G" userLabel="头像">
-                                                <rect key="frame" x="18" y="0.0" width="70" height="70"/>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3hZ-fg-13G" userLabel="头像">
+                                                <rect key="frame" x="-169.5" y="-248.5" width="70" height="70"/>
                                                 <color key="backgroundColor" red="0.21221677923269211" green="0.4759311752788733" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="kJZ-Cw-vY1"/>
                                                     <constraint firstAttribute="height" constant="70" id="sh0-Rq-Rfp"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TurtleJermine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvF-Uo-kvO" userLabel="名字">
-                                                <rect key="frame" x="0.0" y="80" width="106" height="20.5"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TurtleJermine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvF-Uo-kvO" userLabel="名字">
+                                                <rect key="frame" x="-187.5" y="-248.5" width="106" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -42,19 +42,39 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cJE-on-NWX" userLabel="信息框">
-                                        <rect key="frame" x="0.0" y="130.5" width="275" height="80"/>
+                                        <rect key="frame" x="0.0" y="30" width="275" height="81"/>
                                         <subviews>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FLZ-zS-aLu" userLabel="姓名栏">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="0.0"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msy-lP-gpm" userLabel="姓名">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入你的姓名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lYj-iP-YT8" userLabel="请输入你的姓名">
+                                                        <rect key="frame" x="75" y="0.0" width="200" height="0.0"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="kEW-o0-qT2"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="anP-QH-pcI" userLabel="账号栏">
-                                                <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="30.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-aB-Z6q" userLabel="账号">
-                                                        <rect key="frame" x="0.0" y="4.5" width="35" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="5" width="35" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入你的账号" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OAE-dt-CKS" userLabel="请输入你的账号">
-                                                        <rect key="frame" x="75" y="0.0" width="200" height="30"/>
+                                                        <rect key="frame" x="75" y="0.5" width="200" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="CjN-lx-N6B"/>
                                                         </constraints>
@@ -65,16 +85,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="XgA-6V-uka" userLabel="密码栏">
-                                                <rect key="frame" x="0.0" y="50" width="275" height="30"/>
+                                                <rect key="frame" x="0.0" y="50.5" width="275" height="30.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdB-1o-ysg" userLabel="密码">
-                                                        <rect key="frame" x="0.0" y="4.5" width="35" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="5" width="35" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入你的密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XbR-yj-OeI" userLabel="请输入你的密码">
-                                                        <rect key="frame" x="75" y="0.0" width="200" height="30"/>
+                                                        <rect key="frame" x="75" y="0.5" width="200" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="I67-zC-JE0"/>
                                                         </constraints>
@@ -87,22 +107,54 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gz-ZQ-oFq" userLabel="按钮">
-                                        <rect key="frame" x="0.0" y="240.5" width="275" height="30"/>
+                                        <rect key="frame" x="0.0" y="141" width="275" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECJ-HT-CLh" userLabel="登录">
                                                 <rect key="frame" x="0.0" y="0.0" width="133.5" height="30"/>
+                                                <color key="backgroundColor" red="0.76250834189091887" green="0.95877999073875875" blue="0.98106676339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="登录"/>
                                                 <connections>
                                                     <action selector="SignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R89-Za-Huy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-Rf-qjg" userLabel="注册">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-Rf-qjg" userLabel="注册">
                                                 <rect key="frame" x="141.5" y="0.0" width="133.5" height="30"/>
+                                                <color key="backgroundColor" red="0.79307141924285141" green="0.98106676339999999" blue="0.78871994001058898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="注册">
                                                     <color key="titleColor" red="0.17985571859999999" green="0.5801692034" blue="0.34373654729999997" alpha="0.75352112680000005" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="SignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o8a-nz-meh"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb1-Sh-nPp" userLabel="注册2">
+                                                <rect key="frame" x="279" y="0.0" width="0.0" height="30"/>
+                                                <color key="backgroundColor" red="0.79307141920000002" green="0.98106676339999999" blue="0.78871994000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="注册">
+                                                    <color key="titleColor" red="0.17985571859999999" green="0.5801692034" blue="0.34373654729999997" alpha="0.75352112680000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="SignUp2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qw6-h7-jVI"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvl-MP-UdE" userLabel="取消">
+                                                <rect key="frame" x="279" y="0.0" width="0.0" height="30"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="取消">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="Cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QAR-iw-WuT"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qm-mm-CGl" userLabel="退出账号">
+                                                <rect key="frame" x="279" y="0.0" width="0.0" height="30"/>
+                                                <color key="backgroundColor" red="0.98106676339999999" green="0.78037297085145019" blue="0.77506236248946703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="退出账号">
+                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="Quit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYg-IO-KYi"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -113,8 +165,8 @@
                                     <constraint firstItem="9gz-ZQ-oFq" firstAttribute="leading" secondItem="BLP-ZD-lE6" secondAttribute="leading" id="s0i-gk-f2F"/>
                                 </constraints>
                             </stackView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDC-Pg-7ff" userLabel="提示信息">
-                                <rect key="frame" x="155.5" y="477" width="64.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="初始账号201730685011，密码123456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDC-Pg-7ff" userLabel="提示信息">
+                                <rect key="frame" x="41" y="427" width="294" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.52899953768418384" blue="0.024568341303504604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -131,7 +183,18 @@
                     </view>
                     <connections>
                         <outlet property="Account" destination="OAE-dt-CKS" id="Q2j-dp-GiC"/>
+                        <outlet property="AccountFrame" destination="anP-QH-pcI" id="VMp-sf-x9f"/>
+                        <outlet property="Cancel" destination="Dvl-MP-UdE" id="O2J-Jq-jGe"/>
+                        <outlet property="HeadImage" destination="3hZ-fg-13G" id="3gd-U1-JU9"/>
+                        <outlet property="Name" destination="KvF-Uo-kvO" id="i3a-HZ-NMi"/>
+                        <outlet property="NameFrame" destination="FLZ-zS-aLu" id="aby-S7-c3g"/>
+                        <outlet property="NameInput" destination="lYj-iP-YT8" id="guh-LY-wOj"/>
                         <outlet property="Password" destination="XbR-yj-OeI" id="NEc-tm-uaE"/>
+                        <outlet property="PasswordFrame" destination="XgA-6V-uka" id="pIy-Bq-wKS"/>
+                        <outlet property="Quit" destination="1Qm-mm-CGl" id="Uur-ZW-VPs"/>
+                        <outlet property="SignIn" destination="ECJ-HT-CLh" id="vZC-Qw-IpS"/>
+                        <outlet property="SignUp" destination="ll4-Rf-qjg" id="naE-Mt-VQ1"/>
+                        <outlet property="SignUp2" destination="gb1-Sh-nPp" id="ZGA-O3-Juu"/>
                         <outlet property="tip" destination="bDC-Pg-7ff" id="eTu-UU-cIg"/>
                     </connections>
                 </viewController>

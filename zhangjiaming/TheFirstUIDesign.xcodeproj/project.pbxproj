@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F044C4AB2330EFB7001B8E8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C4AA2330EFB7001B8E8C /* AppDelegate.swift */; };
 		F044C4AD2330EFB7001B8E8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C4AC2330EFB7001B8E8C /* ViewController.swift */; };
-		F044C4B02330EFB7001B8E8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F044C4AE2330EFB7001B8E8C /* Main.storyboard */; };
+		F044C4B02330EFB7001B8E8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F044C4AE2330EFB7001B8E8C /* Main.storyboard */; settings = {ASSET_TAGS = (01, ); }; };
 		F044C4B22330EFB7001B8E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F044C4B12330EFB7001B8E8C /* Assets.xcassets */; };
 		F044C4B52330EFB7001B8E8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F044C4B32330EFB7001B8E8C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -90,6 +90,10 @@
 		F044C49F2330EFB6001B8E8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					00,
+					01,
+				);
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = turtlejermine;
