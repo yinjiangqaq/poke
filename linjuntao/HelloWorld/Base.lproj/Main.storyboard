@@ -79,10 +79,25 @@
                                 <state key="normal" title="登录">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g4S-2R-YWa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录注册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3O-jE-Lwq" userLabel="helloworld">
                                 <rect key="frame" x="158.5" y="94" width="97.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="welcomeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3U-QL-fuR">
+                                <rect key="frame" x="152" y="476" width="110" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="res" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntv-YU-8Kb">
+                                <rect key="frame" x="171" y="305" width="74" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -92,12 +107,25 @@
                             <constraint firstItem="wpT-fr-NJ4" firstAttribute="centerX" secondItem="i3O-jE-Lwq" secondAttribute="centerX" id="1bb-hs-bXL"/>
                             <constraint firstItem="uqx-dV-YOy" firstAttribute="top" secondItem="wpT-fr-NJ4" secondAttribute="bottom" constant="87" id="56P-FL-PD4"/>
                             <constraint firstItem="i3O-jE-Lwq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5F9-sh-GtO"/>
+                            <constraint firstItem="X3U-QL-fuR" firstAttribute="top" secondItem="uqx-dV-YOy" secondAttribute="bottom" constant="48" id="6n2-nv-zKs"/>
+                            <constraint firstItem="Ntv-YU-8Kb" firstAttribute="top" secondItem="wpT-fr-NJ4" secondAttribute="bottom" constant="23" id="CH5-Il-rW7"/>
+                            <constraint firstItem="Ntv-YU-8Kb" firstAttribute="centerX" secondItem="wpT-fr-NJ4" secondAttribute="centerX" id="FRt-qW-66P"/>
+                            <constraint firstItem="X3U-QL-fuR" firstAttribute="centerX" secondItem="uqx-dV-YOy" secondAttribute="centerX" id="Jc4-NH-NAH"/>
                             <constraint firstItem="uqx-dV-YOy" firstAttribute="centerX" secondItem="wpT-fr-NJ4" secondAttribute="centerX" id="gy4-gB-sIa"/>
                             <constraint firstItem="wpT-fr-NJ4" firstAttribute="top" secondItem="i3O-jE-Lwq" secondAttribute="bottom" constant="60" id="zgX-1t-u3n"/>
                             <constraint firstItem="i3O-jE-Lwq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="zmh-5m-aK6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="hello_label" destination="i3O-jE-Lwq" id="Qws-6I-dw1"/>
+                        <outlet property="nameText" destination="TQx-5j-79m" id="RsL-T2-QJb"/>
+                        <outlet property="passText" destination="uwX-CV-8X4" id="Yal-vU-9ts"/>
+                        <outlet property="passwordLabel" destination="PPx-CZ-bs5" id="bHf-Jw-dwk"/>
+                        <outlet property="res" destination="Ntv-YU-8Kb" id="cM0-mi-nqn"/>
+                        <outlet property="usernameLabel" destination="h88-kQ-Avl" id="aEr-0a-wic"/>
+                        <outlet property="welcomeLabel" destination="X3U-QL-fuR" id="s5K-SR-KLn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
