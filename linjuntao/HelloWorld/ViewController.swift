@@ -40,7 +40,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func registerButtonClick( sender:UIStoryboardSegue) {
+        
+    }
+    //  第二种方法只能写在viewcontroller里面，通过j回滚的方式，而不是通过注销的方式
 
 }
 
