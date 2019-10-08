@@ -146,20 +146,25 @@
                                     <action selector="loginButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g4S-2R-YWa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mG-e6-FeI">
-                                <rect key="frame" x="87" y="411" width="77" height="30"/>
-                                <state key="normal" title="注册新用户"/>
-                                <connections>
-                                    <segue destination="8bk-7g-Nmf" kind="show" id="cdw-QR-IvU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1d-Yr-cb3">
-                                <rect key="frame" x="255" y="411" width="62" height="30"/>
-                                <state key="normal" title="忘记密码"/>
-                                <connections>
-                                    <segue destination="uM4-Jh-MPZ" kind="show" id="pTR-Zb-dtB"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="7dM-2X-hia">
+                                <rect key="frame" x="87" y="411" width="230" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mG-e6-FeI">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                        <state key="normal" title="注册新用户"/>
+                                        <connections>
+                                            <segue destination="8bk-7g-Nmf" kind="show" id="cdw-QR-IvU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1d-Yr-cb3">
+                                        <rect key="frame" x="168" y="0.0" width="62" height="30"/>
+                                        <state key="normal" title="忘记密码"/>
+                                        <connections>
+                                            <segue destination="uM4-Jh-MPZ" kind="show" id="pTR-Zb-dtB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="welcomeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3U-QL-fuR">
                                 <rect key="frame" x="152" y="500" width="110" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -172,15 +177,13 @@
                             <constraint firstItem="wpT-fr-NJ4" firstAttribute="centerX" secondItem="i3O-jE-Lwq" secondAttribute="centerX" id="1bb-hs-bXL"/>
                             <constraint firstItem="uqx-dV-YOy" firstAttribute="top" secondItem="wpT-fr-NJ4" secondAttribute="bottom" constant="87" id="56P-FL-PD4"/>
                             <constraint firstItem="i3O-jE-Lwq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5F9-sh-GtO"/>
-                            <constraint firstItem="2mG-e6-FeI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="62j-bO-ZVy"/>
                             <constraint firstItem="X3U-QL-fuR" firstAttribute="top" secondItem="uqx-dV-YOy" secondAttribute="bottom" constant="58" id="6n2-nv-zKs"/>
                             <constraint firstItem="Ntv-YU-8Kb" firstAttribute="top" secondItem="wpT-fr-NJ4" secondAttribute="bottom" constant="23" id="CH5-Il-rW7"/>
                             <constraint firstItem="Ntv-YU-8Kb" firstAttribute="centerX" secondItem="wpT-fr-NJ4" secondAttribute="centerX" id="FRt-qW-66P"/>
                             <constraint firstItem="X3U-QL-fuR" firstAttribute="centerX" secondItem="uqx-dV-YOy" secondAttribute="centerX" id="Jc4-NH-NAH"/>
-                            <constraint firstItem="f1d-Yr-cb3" firstAttribute="leading" secondItem="2mG-e6-FeI" secondAttribute="trailing" constant="91" id="Xii-ML-jTn"/>
-                            <constraint firstItem="2mG-e6-FeI" firstAttribute="top" secondItem="uqx-dV-YOy" secondAttribute="bottom" constant="24.333333333333314" id="bCF-yR-bdi"/>
+                            <constraint firstItem="7dM-2X-hia" firstAttribute="centerX" secondItem="uqx-dV-YOy" secondAttribute="centerX" id="XWO-hB-4yo"/>
                             <constraint firstItem="uqx-dV-YOy" firstAttribute="centerX" secondItem="wpT-fr-NJ4" secondAttribute="centerX" id="gy4-gB-sIa"/>
-                            <constraint firstItem="f1d-Yr-cb3" firstAttribute="top" secondItem="uqx-dV-YOy" secondAttribute="bottom" constant="24.333333333333314" id="inq-eF-BWU"/>
+                            <constraint firstItem="7dM-2X-hia" firstAttribute="top" secondItem="uqx-dV-YOy" secondAttribute="bottom" constant="24.333333333333314" id="hqU-em-lf8"/>
                             <constraint firstItem="wpT-fr-NJ4" firstAttribute="top" secondItem="i3O-jE-Lwq" secondAttribute="bottom" constant="60" id="zgX-1t-u3n"/>
                             <constraint firstItem="i3O-jE-Lwq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="zmh-5m-aK6"/>
                         </constraints>
