@@ -11,6 +11,40 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="z5Y-5a-qsD">
+            <objects>
+                <viewController id="DxU-Nx-irt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cMp-gq-Mvu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="商店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeo-rP-7HG">
+                                <rect key="frame" x="186" y="114" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opu-ei-cDm">
+                                <rect key="frame" x="163" y="431" width="102" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="退出登录"/>
+                                <connections>
+                                    <segue destination="QpT-dx-Adm" kind="unwind" unwindAction="exitToHereWithSegue:" id="zVM-ff-8ef"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aha-Iy-igs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HAd-mm-hh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QpT-dx-Adm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="457"/>
+        </scene>
+        <!--登陆界面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecondApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,19 +153,9 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="DcF-up-Phq" userLabel="消息显示">
-                                <rect key="frame" x="7" y="691" width="400" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="DcF-up-Phq" userLabel="消息显示">
+                                <rect key="frame" x="0.0" y="705" width="400" height="100"/>
                                 <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqu-KS-1m8">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="400" id="SV3-yb-qPW"/>
-                                            <constraint firstAttribute="height" constant="40" id="brT-AR-bOY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAc-fg-eAS">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
                                         <constraints>
@@ -142,12 +166,39 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqu-KS-1m8">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="SV3-yb-qPW"/>
+                                            <constraint firstAttribute="height" constant="40" id="brT-AR-bOY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVB-Gy-MQE">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="前往主页面"/>
+                                        <connections>
+                                            <segue destination="DNl-FI-91c" kind="show" id="qsG-nD-Yd4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="LU7-WU-QFZ"/>
                                     <constraint firstAttribute="width" constant="400" id="X1j-f7-scJ"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-Tk-N0X">
+                                <rect key="frame" x="185" y="811" width="30" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="跳"/>
+                                <connections>
+                                    <segue destination="Zbg-vY-l6n" kind="show" id="aDu-F8-qwf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -162,6 +213,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="登陆界面" id="COM-tI-jQG"/>
                     <connections>
                         <outlet property="UserID" destination="O4n-Ra-t6U" id="xBT-HC-C4h"/>
                         <outlet property="loginSuccessfullyInfo" destination="xAc-fg-eAS" id="R2g-sE-FWI"/>
@@ -171,7 +223,137 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.43478260869566" y="137.27678571428569"/>
+            <point key="canvasLocation" x="-572" y="-364"/>
+        </scene>
+        <!--空白哦-->
+        <scene sceneID="09l-1m-aML">
+            <objects>
+                <viewController id="DNl-FI-91c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="buG-bQ-epZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js1-2y-DTh">
+                                <rect key="frame" x="145" y="427" width="125" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="退出登录">
+                                    <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1g4-Xt-ZOd" kind="unwind" unwindAction="exitToHereWithSegue:" id="B25-NP-3uU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zY-5p-6gO">
+                                <rect key="frame" x="124" y="530" width="178" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="进入个人图书馆"/>
+                                <connections>
+                                    <segue destination="mN3-3I-DaH" kind="show" id="lzV-uP-aRc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="主页面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgx-Zm-vzW">
+                                <rect key="frame" x="167" y="99" width="80" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtU-Oc-GoI">
+                                <rect key="frame" x="160" y="613" width="102" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="进入商店"/>
+                                <connections>
+                                    <segue destination="DxU-Nx-irt" kind="show" id="aJQ-yz-pFq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Qmh-0A-IcQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="空白哦" id="xaP-10-XEY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8C-iT-pYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1g4-Xt-ZOd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="457"/>
+        </scene>
+        <!--也不知是干啥的-->
+        <scene sceneID="q1t-gv-RN6">
+            <objects>
+                <viewController id="mN3-3I-DaH" customClass="ViewController" customModule="SecondApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M23-Hq-mxk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99b-Kz-4oM">
+                                <rect key="frame" x="156" y="358" width="102" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="退出登陆"/>
+                                <connections>
+                                    <segue destination="DzI-kC-hDX" kind="unwind" unwindAction="exitToHereWithSegue:" id="p6M-s3-9PV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkO-Fp-jFh">
+                                <rect key="frame" x="149" y="454" width="127" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="前往主页面"/>
+                                <connections>
+                                    <segue destination="DNl-FI-91c" kind="show" id="TVD-ws-QKG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="图书馆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erz-PZ-omY">
+                                <rect key="frame" x="186" y="108" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ys2-mn-RfU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="也不知是干啥的" id="6zT-Gn-KEK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brK-sV-f7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DzI-kC-hDX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="-364"/>
+        </scene>
+        <!--New View Controller-->
+        <scene sceneID="Pty-rs-Vtd">
+            <objects>
+                <viewController id="Zbg-vY-l6n" customClass="NewViewController" customModule="SecondApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Uo-cv-P6r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLO-El-Gnn">
+                                <rect key="frame" x="192" y="350" width="31" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="回"/>
+                                <connections>
+                                    <action selector="dsasda:" destination="Zbg-vY-l6n" eventType="touchUpInside" id="N0b-DQ-hMp"/>
+                                    <action selector="hi:" destination="Zbg-vY-l6n" eventType="touchUpInside" id="2JH-ZC-pbT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dmz-Zs-p2n"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFI-jb-Nwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="-364"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TVD-ws-QKG"/>
+    </inferredMetricsTieBreakers>
 </document>
