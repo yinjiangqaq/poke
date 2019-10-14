@@ -27,7 +27,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Accout    " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beU-8k-6Mk">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Accout    " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beU-8k-6Mk" userLabel="Account">
                                         <rect key="frame" x="70" y="0.0" width="120" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -60,7 +60,8 @@
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LRi-B1-8vt">
                                 <rect key="frame" x="135.5" y="162" width="104" height="93"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.16204732656478882" green="0.10519961267709732" blue="0.065563514828681946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="fAM-Un-jfU"/>
                                     <constraint firstAttribute="width" constant="104" id="gt0-5z-n8O"/>
@@ -112,7 +113,32 @@
                                 <state key="normal" title="登录">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="登录:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vHg-PV-L08"/>
+                                </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 登录成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZt-0r-LhP">
+                                <rect key="frame" x="112.5" y="283.5" width="150" height="100"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6Ia-DA-4k8"/>
+                                    <constraint firstAttribute="width" constant="150" id="Lc2-M9-ELV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码或用户名错误" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTH-D5-TIT">
+                                <rect key="frame" x="112.5" y="283.5" width="150" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Zwr-p4-0uD"/>
+                                    <constraint firstAttribute="width" constant="150" id="qWq-VP-6Bd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -123,20 +149,30 @@
                             <constraint firstItem="HfD-GL-q8X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Yh-DO-gZm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B0R-8h-W88" secondAttribute="bottom" constant="124" id="9uC-gM-ouP"/>
                             <constraint firstItem="OPl-qb-Qyh" firstAttribute="top" secondItem="BJA-gU-bEf" secondAttribute="bottom" constant="35" id="A71-kb-EEc"/>
+                            <constraint firstItem="iZt-0r-LhP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CzA-wk-kfO"/>
                             <constraint firstItem="xhK-lt-Zw3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D9o-rB-wcV"/>
                             <constraint firstItem="LRi-B1-8vt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FWX-HR-YV3"/>
                             <constraint firstItem="LRi-B1-8vt" firstAttribute="top" secondItem="xhK-lt-Zw3" secondAttribute="bottom" constant="52.5" id="Na8-Y9-FPF"/>
+                            <constraint firstItem="JTH-D5-TIT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RjG-Di-0ow"/>
                             <constraint firstItem="HfD-GL-q8X" firstAttribute="top" secondItem="LRi-B1-8vt" secondAttribute="bottom" constant="62" id="St3-cK-Kuq"/>
                             <constraint firstItem="xhK-lt-Zw3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V66-AL-Nm7"/>
                             <constraint firstItem="oBE-nh-4go" firstAttribute="top" secondItem="HfD-GL-q8X" secondAttribute="bottom" constant="32" id="X9f-AT-ax9"/>
+                            <constraint firstItem="iZt-0r-LhP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XNH-XF-Zr1"/>
                             <constraint firstItem="B0R-8h-W88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="490" id="aIS-w8-B8W"/>
                             <constraint firstItem="B0R-8h-W88" firstAttribute="top" secondItem="OPl-qb-Qyh" secondAttribute="bottom" constant="17" id="agc-q4-Ssg"/>
                             <constraint firstItem="16L-4M-iag" firstAttribute="top" secondItem="OPl-qb-Qyh" secondAttribute="bottom" constant="17" id="ezz-DY-Ish"/>
+                            <constraint firstItem="JTH-D5-TIT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ijK-RL-YmQ"/>
                             <constraint firstItem="B0R-8h-W88" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tRx-ka-h4u"/>
                             <constraint firstItem="beU-8k-6Mk" firstAttribute="top" secondItem="LRi-B1-8vt" secondAttribute="bottom" constant="62" id="wkU-h3-so3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Account" destination="beU-8k-6Mk" id="eDY-LH-MCp"/>
+                        <outlet property="Password" destination="BJA-gU-bEf" id="qso-a7-D1Y"/>
+                        <outlet property="密码或用户名错误" destination="JTH-D5-TIT" id="hBl-ky-yxV"/>
+                        <outlet property="登录成功" destination="iZt-0r-LhP" id="hI9-Fh-42n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

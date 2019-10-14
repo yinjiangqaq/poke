@@ -10,11 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var res: UILabel!
+    @IBOutlet weak var hello_label: UILabel!
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var nameText: UITextField!
+    @IBOutlet weak var passwordLabel: UILabel!
+    
+    @IBOutlet weak var passText: UITextField!
+    @IBAction func loginButtonClick(_ sender: Any) {
+        if let userName = nameText.text{
+            welcomeLabel.text = "welcome    " + userName
+        }
+        if ((nameText.text == "lin") && (passText.text == "123")) {
+            res.isHidden = false
+            res.text = "login successfully"
+            res.textColor = UIColor.black
+        }else{
+             res.isHidden = false
+             res.text = "login failed,check your username and password!"
+            res.textColor = UIColor.red //修改字体的颜色
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func registerButtonClick( sender:UIStoryboardSegue) {
+        
+    }
+    //  第二种方法只能写在viewcontroller里面，通过j回滚的方式，而不是通过注销的方式
 
 }
 
