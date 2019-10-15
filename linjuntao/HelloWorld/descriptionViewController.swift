@@ -34,9 +34,14 @@ class descriptionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "saveToList"){
         foodForEdit?.foodTitle = self.foodName.text
         foodForEdit?.foodContent = self.foodContent.text
-        //相当于详情页面的回调函数，也就是详情页面转移时一定会执行的函数,相当于把东西传出去
+            print("save")
+        }
+        if(segue.identifier == "cancelToList"){
+            print("cancel")
+        } //相当于详情页面的回调函数，也就是详情页面转移时一定会执行的函数,相当于把东西传出去
 
     }
  

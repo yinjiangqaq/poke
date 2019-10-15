@@ -104,12 +104,12 @@
                     <navigationItem key="navigationItem" id="8Ok-Xl-SkQ">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="shW-rB-q0L">
                             <connections>
-                                <segue destination="Qtd-ey-fGb" kind="unwind" unwindAction="cancelToListWithSegue:" id="uH3-RC-Yrw"/>
+                                <segue destination="Qtd-ey-fGb" kind="unwind" identifier="cancelToList" unwindAction="cancelToListWithSegue:" id="uH3-RC-Yrw"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="AfT-Yc-AYB">
                             <connections>
-                                <segue destination="Qtd-ey-fGb" kind="unwind" unwindAction="saveToListWithSegue:" id="UQe-6w-s9A"/>
+                                <segue destination="Qtd-ey-fGb" kind="unwind" identifier="saveToList" unwindAction="saveToListWithSegue:" id="UQe-6w-s9A"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
