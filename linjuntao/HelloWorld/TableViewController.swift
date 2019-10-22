@@ -10,6 +10,9 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+
+    
+    
     var foodList: [food] = [food]()
     func initFoodList() {
         foodList.append(food(name: "cake", description: "sweet"))
@@ -65,6 +68,7 @@ class TableViewController: UITableViewController {
 
          //Configure the cell...
      cell.textLabel?.text = foodList[indexPath.row].foodTitle
+        cell.detailTextLabel?.text = foodList[indexPath.row].foodContent
         return cell
         //z控制每一个cell
     }
@@ -113,12 +117,18 @@ class TableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         let  descriptionVC = segue.destination as! descriptionViewController
+        if(segue.identifier == "showDetail"){
+        
         if let selectedCell = sender as? UITableViewCell {
             let indexPath = tableView.indexPath(for: selectedCell)!
             let selectedFood = foodList[(indexPath as NSIndexPath).row]
             descriptionVC.foodForEdit = selectedFood
         }
-        
+        print("show detail view")
+        }else{
+           descriptionVC.foodForEdit = food(name: "", description: "")
+            print("add new food")
+        }
     }
  
 
