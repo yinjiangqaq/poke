@@ -15,12 +15,30 @@ class TableViewController: UITableViewController {
     
     var foodList: [food] = [food]()
     func initFoodList() {
-        foodList.append(food(name: "cake", description: "sweet"))
-        foodList.append(food(name: "hamburger", description: "junkfood"))
+        var foodlist: [food]? = loadFoodFile()
+        if(foodlist == nil){
+            foodList.append(food(name: "cake", description: "sweet"))
+            foodList.append(food(name: "hamburger", description: "junkfood"))
+            
+        }else{
+            foodList = foodlist!
+        }
     }
+    
+    func saveFoodFile(){
+        let success = NSKeyedArchiver.archiveRootObject(foodList, toFile: food.ArchiveURL.path)
+        if !success{
+            print("Failed ...")
+        }
+    }
+    func loadFoodFile() -> [food]? {
+        return (NSKeyedUnarchiver.unarchiveObject(withFile: food.ArchiveURL.path) as? [food])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         initFoodList()
+            initFoodList()
+        }
         //界面初始化函数
         
         
@@ -29,7 +47,7 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    
     @IBAction func cancelToList(segue:UIStoryboardSegue){
         
     }
@@ -47,6 +65,7 @@ class TableViewController: UITableViewController {
                 }
             }
         }
+        saveFoodFile()
     }
     // MARK: - Table view data source
 
@@ -82,17 +101,19 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            foodList.remove(at: indexPath.row)
+            saveFoodFile()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+ 
 
     /*
     // Override to support rearranging the table view.
