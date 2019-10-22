@@ -13,10 +13,27 @@ class TableViewController: UITableViewController {
     var foodList: [Food] = [Food]()
     
     func initFoodList(){
-        foodList.append(Food(name: "cake", foodDescription: "sweet"))
-        foodList.append(Food(name: "cola", foodDescription: "water"))
-        foodList.append(Food(name: "icream", foodDescription: "cold"))
-        foodList.append(Food(name: "bread", foodDescription: "good"))
+        var tempFoodList : [Food]? = loadFoodFile()
+        if(tempFoodList == nil){
+            foodList.append(Food(name: "cake", foodDescription: "sweet"))
+            foodList.append(Food(name: "cola", foodDescription: "water"))
+            foodList.append(Food(name: "icream", foodDescription: "cold"))
+            foodList.append(Food(name: "bread", foodDescription: "good"))
+        }
+        else{
+            foodList = tempFoodList!
+        }
+    }
+    
+    func saveFoodFile() {
+        let success = NSKeyedArchiver.archiveRootObject(foodList, toFile: Food.ArchiveURL.path)
+        if !success{
+            print("Failed .....")
+        }
+    }
+    
+    func loadFoodFile() -> [Food]? {
+        return (NSKeyedUnarchiver.unarchiveObject(withFile: Food.ArchiveURL.path) as? [Food])
     }
     
 
@@ -47,6 +64,7 @@ class TableViewController: UITableViewController {
                 }
             }
         }
+        saveFoodFile()
     }
     
 
@@ -68,6 +86,7 @@ class TableViewController: UITableViewController {
 
         // Configure the cell...
         cell.textLabel?.text=foodList[indexPath.row].name
+        cell.detailTextLabel?.text = foodList[indexPath.row].foodDescription
 
         return cell
     }
@@ -81,17 +100,20 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            foodList.remove(at: indexPath.row)
+            saveFoodFile()
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+ 
 
     /*
     // Override to support rearranging the table view.
@@ -115,11 +137,16 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
         let descriptionVC = segue.destination as! DescriptionViewController
-        if let selectedCell = sender as? UITableViewCell{
-            let indexPath=tableView.indexPath(for: selectedCell)!
-            let selectedFood = foodList[( indexPath as NSIndexPath ).row]
-            descriptionVC.foodForEdit=selectedFood
+        if(segue.identifier == "showDetail"){
+            if let selectedCell = sender as? UITableViewCell{
+                let indexPath=tableView.indexPath(for: selectedCell)!
+                let selectedFood = foodList[( indexPath as NSIndexPath ).row]
+                descriptionVC.foodForEdit=selectedFood
+            }
+        }else if(segue.identifier == "addNewFood"){
+            descriptionVC.foodForEdit=Food(name: "", foodDescription: "")
         }
     }
     
