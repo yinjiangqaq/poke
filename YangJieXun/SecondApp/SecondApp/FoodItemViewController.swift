@@ -18,9 +18,9 @@ class FoodItemViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.nameText.text = foodForEdit?.name
-        self.descriptionText.text = foodForEdit?.description
-        self.navigationItem.title = foodForEdit?.name
+        self.nameText.text = foodForEdit?.foodName
+        self.descriptionText.text = foodForEdit?.foodDescription
+        self.navigationItem.title = foodForEdit?.foodName
     }
 
     
@@ -30,10 +30,17 @@ class FoodItemViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if((self.nameText.text != "") && (self.descriptionText.text != "")){
+        if segue.identifier == "saveToList"{
+            print("save")
+            foodForEdit = Food(name: self.nameText.text!,description: self.descriptionText.text!)
+        }
+        if segue.identifier == "cancelToList"{
+            print("cancel")
+        }
+        /*if((self.nameText.text != "") && (self.descriptionText.text != "")){
             self.foodForEdit?.name = self.nameText.text
             self.foodForEdit?.description = self.descriptionText.text
-        }
+        }*/
     }
     
 

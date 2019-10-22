@@ -61,7 +61,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="IGD-Tt-Iwd" kind="show" id="2hK-hi-WEk"/>
+                                    <segue destination="IGD-Tt-Iwd" kind="show" identifier="showDetail" id="2hK-hi-WEk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,7 +70,15 @@
                             <outlet property="delegate" destination="3TG-Rt-qKP" id="Uak-8D-ClK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="elp-cH-Vhu"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="elp-cH-Vhu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PFi-G5-kLn">
+                            <connections>
+                                <segue destination="IGD-Tt-Iwd" kind="show" identifier="addFood" id="EQu-dB-agB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4p-RW-mQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,13 +115,13 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="4r2-Le-PL1">
                             <connections>
                                 <action selector="Cancel:" destination="IGD-Tt-Iwd" id="eyq-A4-1G1"/>
-                                <segue destination="MAd-f2-rfI" kind="unwind" identifier="cancelToo" unwindAction="cancelToListWithSegue:" id="hsC-bP-DxD"/>
+                                <segue destination="MAd-f2-rfI" kind="unwind" identifier="cancelToList" unwindAction="cancelToListWithSegue:" id="hsC-bP-DxD"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="uka-Lk-WHK">
                             <connections>
                                 <action selector="Save:" destination="IGD-Tt-Iwd" id="xdE-4X-HlL"/>
-                                <segue destination="MAd-f2-rfI" kind="unwind" unwindAction="saveToListWithSegue:" id="n2R-Cz-GRZ"/>
+                                <segue destination="MAd-f2-rfI" kind="unwind" identifier="saveToList" unwindAction="saveToListWithSegue:" id="n2R-Cz-GRZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -126,7 +134,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zo-lh-jC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="MAd-f2-rfI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="555.07246376811599" y="-1175.2232142857142"/>
+            <point key="canvasLocation" x="-307" y="-1142"/>
         </scene>
         <!--登陆界面-->
         <scene sceneID="tne-QT-ifu">
@@ -435,24 +443,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFI-jb-Nwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1596" y="-364"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="JSa-v2-rM4">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IM5-QB-SL2" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bPD-gW-KnY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="IGD-Tt-Iwd" kind="relationship" relationship="rootViewController" id="D7i-WG-Gfu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TZc-QO-zye" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-452.17391304347831" y="-1503.3482142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="itR-cO-2uQ">
