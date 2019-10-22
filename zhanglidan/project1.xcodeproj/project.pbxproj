@@ -12,6 +12,11 @@
 		18A033FB2330AF2C004C9908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A033F92330AF2C004C9908 /* Main.storyboard */; };
 		18A033FD2330AF2E004C9908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A033FC2330AF2E004C9908 /* Assets.xcassets */; };
 		18A034002330AF2E004C9908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A033FE2330AF2E004C9908 /* LaunchScreen.storyboard */; };
+		18F4AD7823559D99002DF2E1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4AD7723559D99002DF2E1 /* TableViewController.swift */; };
+		18F4AD7A2355A39F002DF2E1 /* food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4AD792355A39F002DF2E1 /* food.swift */; };
+		18F4AD7C2355A9A9002DF2E1 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4AD7B2355A9A9002DF2E1 /* menuViewController.swift */; };
+		18FE6C44234C7C8000379EAB /* forgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE6C43234C7C8000379EAB /* forgetViewController.swift */; };
+		18FE6C46234C7DA800379EAB /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE6C45234C7DA800379EAB /* registerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		18A033FC2330AF2E004C9908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A033FF2330AF2E004C9908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A034012330AF2E004C9908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F4AD7723559D99002DF2E1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		18F4AD792355A39F002DF2E1 /* food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = food.swift; sourceTree = "<group>"; };
+		18F4AD7B2355A9A9002DF2E1 /* menuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
+		18FE6C43234C7C8000379EAB /* forgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetViewController.swift; sourceTree = "<group>"; };
+		18FE6C45234C7DA800379EAB /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +66,12 @@
 			children = (
 				18A033F52330AF2C004C9908 /* AppDelegate.swift */,
 				18A033F72330AF2C004C9908 /* ViewController.swift */,
+				18FE6C43234C7C8000379EAB /* forgetViewController.swift */,
+				18FE6C45234C7DA800379EAB /* registerViewController.swift */,
 				18A033F92330AF2C004C9908 /* Main.storyboard */,
+				18F4AD7B2355A9A9002DF2E1 /* menuViewController.swift */,
+				18F4AD792355A39F002DF2E1 /* food.swift */,
+				18F4AD7723559D99002DF2E1 /* TableViewController.swift */,
 				18A033FC2330AF2E004C9908 /* Assets.xcassets */,
 				18A033FE2330AF2E004C9908 /* LaunchScreen.storyboard */,
 				18A034012330AF2E004C9908 /* Info.plist */,
@@ -90,6 +105,9 @@
 		18A033EA2330AF2C004C9908 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					"菜单",
+				);
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = Younger;
@@ -137,6 +155,11 @@
 			files = (
 				18A033F82330AF2C004C9908 /* ViewController.swift in Sources */,
 				18A033F62330AF2C004C9908 /* AppDelegate.swift in Sources */,
+				18FE6C44234C7C8000379EAB /* forgetViewController.swift in Sources */,
+				18F4AD7823559D99002DF2E1 /* TableViewController.swift in Sources */,
+				18FE6C46234C7DA800379EAB /* registerViewController.swift in Sources */,
+				18F4AD7C2355A9A9002DF2E1 /* menuViewController.swift in Sources */,
+				18F4AD7A2355A39F002DF2E1 /* food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
