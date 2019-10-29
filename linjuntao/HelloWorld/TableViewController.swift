@@ -9,16 +9,16 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
-
+   
+    
     
     
     var foodList: [food] = [food]()
     func initFoodList() {
         var foodlist: [food]? = loadFoodFile()
         if(foodlist == nil){
-            foodList.append(food(name: "cake", description: "sweet"))
-            foodList.append(food(name: "hamburger", description: "junkfood"))
+            foodList.append(food(name: "cake", description: "sweet",foodAvatar: nil))
+            foodList.append(food(name: "hamburger", description: "junkfood",foodAvatar: nil))
             
         }else{
             foodList = foodlist!
@@ -38,6 +38,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             initFoodList()
+        self.tableView.rowHeight = 70
         }
         //界面初始化函数
         
@@ -83,11 +84,14 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)as! foodTableViewCell
 
          //Configure the cell...
-     cell.textLabel?.text = foodList[indexPath.row].foodTitle
-        cell.detailTextLabel?.text = foodList[indexPath.row].foodContent
+//     cell.textLabel?.text = foodList[indexPath.row].foodTitle
+//        cell.detailTextLabel?.text = foodList[indexPath.row].foodContent
+        cell.avatarImage?.image = foodList[indexPath.row].foodAvatar
+        cell.titleText?.text = foodList[indexPath.row].foodTitle
+        cell.contentText?.text = foodList[indexPath.row].foodContent
         return cell
         //z控制每一个cell
     }
@@ -147,7 +151,7 @@ class TableViewController: UITableViewController {
         }
         print("show detail view")
         }else{
-           descriptionVC.foodForEdit = food(name: "", description: "")
+           descriptionVC.foodForEdit = food(name: "", description: "",foodAvatar: nil)
             print("add new food")
         }
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1821090B234C72C5006B7D8A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821090A234C72C5006B7D8A /* RegisterViewController.swift */; };
 		1821090D234C7755006B7D8A /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821090C234C7755006B7D8A /* ForgetViewController.swift */; };
+		1844C3032368193600F73E55 /* foodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844C3022368193600F73E55 /* foodTableViewCell.swift */; };
 		184F6642232790E9004096FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F6641232790E9004096FF /* AppDelegate.swift */; };
 		184F6644232790E9004096FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F6643232790E9004096FF /* ViewController.swift */; };
 		184F6647232790E9004096FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184F6645232790E9004096FF /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		1821090A234C72C5006B7D8A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1821090C234C7755006B7D8A /* ForgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
+		1844C3022368193600F73E55 /* foodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodTableViewCell.swift; sourceTree = "<group>"; };
 		184F663E232790E9004096FF /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184F6641232790E9004096FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184F6643232790E9004096FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		184F6640232790E9004096FF /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				1844C3022368193600F73E55 /* foodTableViewCell.swift */,
 				18D821EC2355AAAF004D4211 /* descriptionViewController.swift */,
 				1821090A234C72C5006B7D8A /* RegisterViewController.swift */,
 				184F6641232790E9004096FF /* AppDelegate.swift */,
@@ -155,6 +158,7 @@
 				184F6642232790E9004096FF /* AppDelegate.swift in Sources */,
 				18D821E923559D15004D4211 /* TableViewController.swift in Sources */,
 				18D821ED2355AAAF004D4211 /* descriptionViewController.swift in Sources */,
+				1844C3032368193600F73E55 /* foodTableViewCell.swift in Sources */,
 				1821090D234C7755006B7D8A /* ForgetViewController.swift in Sources */,
 				18D821EB2355A386004D4211 /* food.swift in Sources */,
 			);

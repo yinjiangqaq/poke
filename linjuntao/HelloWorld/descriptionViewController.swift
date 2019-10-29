@@ -8,11 +8,25 @@
 
 import UIKit
 
-class descriptionViewController: UIViewController {
+class descriptionViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var foodName: UITextField!
     
+    @IBAction func tapPhoto(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        present(imagePicker, animated: true,completion: nil)
+    }
     @IBOutlet weak var foodContent: UITextField!
+    
+    @IBOutlet weak var image: UIImageView!
+    
+    @IBAction func takePhoto(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true,completion: nil)
+    }
     
     var foodForEdit: food?
     override func viewDidLoad() {
@@ -20,13 +34,17 @@ class descriptionViewController: UIViewController {
         self.foodName.text = foodForEdit?.foodTitle
         self.foodContent.text = foodForEdit?.foodContent
         self.navigationItem.title = foodForEdit?.foodTitle
-       
+       self.image.image = foodForEdit?.foodAvatar
         foodForEdit?.foodTitle = self.foodName.text
             foodForEdit?.foodContent = self.foodContent.text
         // Do any additional setup after loading the view.
     }
     
-
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        self.image.image = selectedImage
+        dismiss(animated: true, completion: nil)
+    }
     
     // MARK: - Navigation
 
@@ -37,6 +55,7 @@ class descriptionViewController: UIViewController {
         if(segue.identifier == "saveToList"){
         foodForEdit?.foodTitle = self.foodName.text
         foodForEdit?.foodContent = self.foodContent.text
+            foodForEdit?.foodAvatar = self.image.image
             print("save")
         }
         if(segue.identifier == "cancelToList"){
