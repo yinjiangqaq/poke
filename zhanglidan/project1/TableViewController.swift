@@ -13,14 +13,14 @@ class TableViewController: UITableViewController {
     var foodList:[food] = [food]()
     
     func initFoodList (){
-        let temp = loadFoodFile()
-        if(temp == nil){
-        foodList.append(food(name: "Cake",description:"It's so sweet"))
-        foodList.append(food(name: "Fish",description:"It's very spicy"))
-        foodList.append(food(name: "Coconut",description:"It's delicious"))
+        let foodlist:[food]? = loadFoodFile()
+        if(foodlist == nil){
+        foodList.append(food(name: "Cake",description:"It's so sweet",foodAvatar:nil))
+        foodList.append(food(name: "Fish",description:"It's very spicy",foodAvatar:nil ))
+        foodList.append(food(name: "Coconut",description:"It's delicious",foodAvatar: nil))
         }
         else{
-            foodList = temp!
+            foodList = foodlist!
         }
     }
     func saveFoodFile(){
@@ -36,6 +36,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initFoodList()
+        self.tableView.rowHeight=70
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -74,12 +75,13 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodcell", for: indexPath) as! foodcellTableViewCell
 
         // Configure the cell...
 
-        cell.textLabel?.text = foodList[indexPath.row].name
-        
+        cell.ImageView.image = foodList[indexPath.row].foodAvatar
+        cell.foodname.text = foodList[indexPath.row].name
+        cell.Description.text = foodList[indexPath.row].fooddescription
         return cell
     }
 

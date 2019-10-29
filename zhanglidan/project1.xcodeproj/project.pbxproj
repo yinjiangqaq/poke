@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1889B84B23681603002FE5E0 /* foodcellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889B84A23681603002FE5E0 /* foodcellTableViewCell.swift */; };
 		18A033F62330AF2C004C9908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A033F52330AF2C004C9908 /* AppDelegate.swift */; };
 		18A033F82330AF2C004C9908 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A033F72330AF2C004C9908 /* ViewController.swift */; };
 		18A033FB2330AF2C004C9908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A033F92330AF2C004C9908 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1889B84A23681603002FE5E0 /* foodcellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodcellTableViewCell.swift; sourceTree = "<group>"; };
 		18A033F22330AF2C004C9908 /* project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A033F52330AF2C004C9908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A033F72330AF2C004C9908 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				18F4AD7B2355A9A9002DF2E1 /* menuViewController.swift */,
 				18F4AD792355A39F002DF2E1 /* food.swift */,
 				18F4AD7723559D99002DF2E1 /* TableViewController.swift */,
+				1889B84A23681603002FE5E0 /* foodcellTableViewCell.swift */,
 				18A033FC2330AF2E004C9908 /* Assets.xcassets */,
 				18A033FE2330AF2E004C9908 /* LaunchScreen.storyboard */,
 				18A034012330AF2E004C9908 /* Info.plist */,
@@ -158,6 +161,7 @@
 				18FE6C44234C7C8000379EAB /* forgetViewController.swift in Sources */,
 				18F4AD7823559D99002DF2E1 /* TableViewController.swift in Sources */,
 				18FE6C46234C7DA800379EAB /* registerViewController.swift in Sources */,
+				1889B84B23681603002FE5E0 /* foodcellTableViewCell.swift in Sources */,
 				18F4AD7C2355A9A9002DF2E1 /* menuViewController.swift in Sources */,
 				18F4AD7A2355A39F002DF2E1 /* food.swift in Sources */,
 			);
