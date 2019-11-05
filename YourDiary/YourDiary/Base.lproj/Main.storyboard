@@ -1,24 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6fR-wx-p9j">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--我的-->
+        <scene sceneID="s2W-hj-TRI">
+            <objects>
+                <viewController id="eu9-Gq-Iw6" customClass="personalViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lvk-KM-miq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="我的" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHf-zf-jMl">
+                                <rect key="frame" x="182" y="433" width="50" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HHf-zf-jMl" firstAttribute="centerX" secondItem="lvk-KM-miq" secondAttribute="centerX" id="Sh4-gD-oEc"/>
+                            <constraint firstItem="HHf-zf-jMl" firstAttribute="centerY" secondItem="lvk-KM-miq" secondAttribute="centerY" id="pHs-9P-5gy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NGs-0E-7F4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我的" id="ud4-KC-eVk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLw-Oj-hfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2732" y="-513"/>
+        </scene>
+        <!--diaryEdit-->
+        <scene sceneID="KVy-Uq-vb4">
+            <objects>
+                <viewController title="diaryEdit" id="jUS-S7-onF" customClass="diaryEditViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pyh-nx-Rzb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="日记编辑界面" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pX6-xc-Dx7">
+                                <rect key="frame" x="153.5" y="433" width="107" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pX6-xc-Dx7" firstAttribute="centerY" secondItem="Pyh-nx-Rzb" secondAttribute="centerY" id="HnY-bF-O6d"/>
+                            <constraint firstItem="pX6-xc-Dx7" firstAttribute="centerX" secondItem="Pyh-nx-Rzb" secondAttribute="centerX" id="xPX-Oh-Xl2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="63w-uB-RRc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zel-I0-tNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3723" y="-514"/>
+        </scene>
+        <!--weather-->
+        <scene sceneID="WEY-qJ-xE7">
+            <objects>
+                <viewController title="weather" id="9uu-hq-ct2" customClass="weatherViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6NS-2Z-obR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="修改天气" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6IV-Oc-b3T">
+                                <rect key="frame" x="167.5" y="433" width="79" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6IV-Oc-b3T" firstAttribute="centerY" secondItem="6NS-2Z-obR" secondAttribute="centerY" id="AjP-vk-Mlq"/>
+                            <constraint firstItem="6IV-Oc-b3T" firstAttribute="centerX" secondItem="6NS-2Z-obR" secondAttribute="centerX" id="Na1-eD-uUr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mXe-z9-fxw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRM-iQ-ket" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3722" y="856"/>
+        </scene>
+        <!--personalEdit-->
+        <scene sceneID="fSP-gK-ziq">
+            <objects>
+                <viewController title="personalEdit" id="nLh-5a-mOT" customClass="personEditViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W2c-r7-BFK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="个人信息修改" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Btp-hi-iVP">
+                                <rect key="frame" x="159" y="345" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="g1O-zA-5Nu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sof-ej-Dvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3722" y="147"/>
+        </scene>
+        <!--浏览-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="historyViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="浏览" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LmE-Lk-F5W">
+                                <rect key="frame" x="182" y="433" width="50" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V3d-lq-TNO">
+                                <rect key="frame" x="105" y="44" width="213" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LmE-Lk-F5W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yMD-am-WwU"/>
+                            <constraint firstItem="LmE-Lk-F5W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zJr-AG-Cwg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="浏览" id="wkW-nc-0wn"/>
+                    <navigationItem key="navigationItem" id="VB2-fP-ZyF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2730.434782608696" y="133.92857142857142"/>
+        </scene>
+        <!--日历-->
+        <scene sceneID="c2S-HW-BHc">
+            <objects>
+                <viewController id="AJS-wC-mea" customClass="calendarViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GCB-J9-N5f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="日历" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWo-Hr-1eo">
+                                <rect key="frame" x="182" y="433" width="50" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qWo-Hr-1eo" firstAttribute="centerY" secondItem="GCB-J9-N5f" secondAttribute="centerY" id="Gro-bg-NFe"/>
+                            <constraint firstItem="qWo-Hr-1eo" firstAttribute="centerX" secondItem="GCB-J9-N5f" secondAttribute="centerX" id="dRl-dc-eYf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dsh-mw-6SK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="日历" id="GfD-0L-KSv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHM-5E-2bC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="864"/>
+        </scene>
+        <!--login-->
+        <scene sceneID="7Jy-nU-wBG">
+            <objects>
+                <viewController title="login" id="fHA-kp-n78" customClass="loginViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="roq-Rf-7I6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="login" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sqw-Mb-OmK">
+                                <rect key="frame" x="180.5" y="433" width="53" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sqw-Mb-OmK" firstAttribute="centerX" secondItem="roq-Rf-7I6" secondAttribute="centerX" id="YtN-yq-Uzu"/>
+                            <constraint firstItem="Sqw-Mb-OmK" firstAttribute="centerY" secondItem="roq-Rf-7I6" secondAttribute="centerY" id="jbl-ZL-2uQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Wn-6g-tRY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6FT-lZ-jt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="147"/>
+        </scene>
+        <!--register-->
+        <scene sceneID="6Ch-Mi-azG">
+            <objects>
+                <viewController title="register" id="2YZ-w2-UNi" customClass="registerViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yTQ-Et-Xfh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="resgister" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AAM-WC-OZi">
+                                <rect key="frame" x="168" y="433" width="78" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AAM-WC-OZi" firstAttribute="centerY" secondItem="yTQ-Et-Xfh" secondAttribute="centerY" id="VTu-x6-8Nk"/>
+                            <constraint firstItem="AAM-WC-OZi" firstAttribute="centerX" secondItem="yTQ-Et-Xfh" secondAttribute="centerX" id="cIV-Ra-sWL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WzM-ey-6tP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7Q-oG-CGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="-562"/>
+        </scene>
+        <!--My Tab Bar Controller-->
+        <scene sceneID="aig-GI-O6y">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6fR-wx-p9j" customClass="myTabBarController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="top" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="CBN-qf-gpt">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tinyColor">
+                                <color key="value" red="1" green="0.48076393249999999" blue="0.42565086730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="oST-q9-naI"/>
+                        <segue destination="AJS-wC-mea" kind="relationship" relationship="viewControllers" id="1cE-wv-37s"/>
+                        <segue destination="eu9-Gq-Iw6" kind="relationship" relationship="viewControllers" id="55p-CS-8BG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEY-29-ecZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="147"/>
         </scene>
     </scenes>
 </document>
