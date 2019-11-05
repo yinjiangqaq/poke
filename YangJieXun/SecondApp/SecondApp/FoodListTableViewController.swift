@@ -13,10 +13,12 @@ class FoodListTableViewController: UITableViewController {
     var foodList:[Food] = [Food]()
     
     func initFoodList(){
-        var temp = loadFoodFile()
+        let temp = loadFoodFile()
         if(temp == nil){
-            foodList.append(Food(name: "cake", description:"sweet"))
-            foodList.append(Food(name: "peach", description:"delicious"))
+            foodList.append(Food(name: "cake", description:"sweet", foodAvatar: nil))
+            foodList.append(Food(name: "peach", description:"delicious", foodAvatar: nil))
+            foodList.append(Food(name: "grape", description: "nice", foodAvatar: nil))
+        
         }else{
             foodList = temp!
         }
@@ -37,7 +39,12 @@ class FoodListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initFoodList()
+        if let defaultFoodList = loadFoodFile(){
+            foodList = defaultFoodList
+        }else{
+            initFoodList()
+        }
+        self.tableView.rowHeight = 80
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -76,9 +83,13 @@ class FoodListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as! FoodTableViewCell
         // Configure the cell...
-        cell.textLabel?.text=foodList[indexPath.row].foodName
+        cell.foodName.text = foodList[indexPath.row].foodName
+        cell.foodDes.text = foodList[indexPath.row].foodDescription
+        cell.foodImage.image = foodList[indexPath.row].foodAvatar
+        
+        
         return cell
     }
     
@@ -135,7 +146,7 @@ class FoodListTableViewController: UITableViewController {
             print("show detail view")
         }
         else{
-            descriptionVC.foodForEdit = Food(name:"", description:"")
+            descriptionVC.foodForEdit = Food(name:"", description:"",foodAvatar: nil)
             print("add new food")
         }
         // Get the new view controller using segue.destination.
