@@ -1,99 +1,97 @@
 //
 //  TableViewController.swift
-//  HelloWorld
+//  TheFirstUIDesign
 //
 //  Created by Apple on 2019/10/15.
-//  Copyright © 2019 feng. All rights reserved.
+//  Copyright © 2019 turtlejermine. All rights reserved.
 //
 
 import UIKit
 
 class TableViewController: UITableViewController {
-   
     
+    var foodList: [Food] = [Food]()
     
-    
-    var foodList: [food] = [food]()
-    func initFoodList() {
-        var foodlist: [food]? = loadFoodFile()
-        if(foodlist == nil){
-            foodList.append(food(name: "cake", description: "sweet",foodAvatar: nil))
-            foodList.append(food(name: "hamburger", description: "junkfood",foodAvatar: nil))
-            
-        }else{
-            foodList = foodlist!
+    func initFoodList(){
+        var tempFoodList : [Food]? = loadFoodFile()
+        if(tempFoodList == nil){
+            foodList.append(Food(name: "cake", foodDescription: "sweet",foodAvatar: nil))
+            foodList.append(Food(name: "cola", foodDescription: "water",foodAvatar: nil))
+            foodList.append(Food(name: "icream", foodDescription: "cold",foodAvatar: nil))
+            foodList.append(Food(name: "bread", foodDescription: "good",foodAvatar: nil))
+        }
+        else{
+            foodList = tempFoodList!
         }
     }
     
-    func saveFoodFile(){
-        let success = NSKeyedArchiver.archiveRootObject(foodList, toFile: food.ArchiveURL.path)
+    func saveFoodFile() {
+        let success = NSKeyedArchiver.archiveRootObject(foodList, toFile: Food.ArchiveURL.path)
         if !success{
-            print("Failed ...")
+            print("Failed .....")
         }
     }
-    func loadFoodFile() -> [food]? {
-        return (NSKeyedUnarchiver.unarchiveObject(withFile: food.ArchiveURL.path) as? [food])
+    
+    func loadFoodFile() -> [Food]? {
+        return (NSKeyedUnarchiver.unarchiveObject(withFile: Food.ArchiveURL.path) as? [Food])
     }
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-            initFoodList()
-        self.tableView.rowHeight = 70
-        }
-        //界面初始化函数
-        
-        
+        initFoodList()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.tableView.rowHeight=80
+    }
     
-    @IBAction func cancelToList(segue:UIStoryboardSegue){
+    @IBAction func cancelToList (segue:UIStoryboardSegue){
         
     }
-    //exit 函数是优先级最高的函数，只要点击了save就一定不会执行其他的action，或者其他基于这个按钮的func
-    @IBAction func saveToList(segue:UIStoryboardSegue){
-        if let addFoodVC = segue.source as? descriptionViewController{
+    @IBAction func saveToList (segue:UIStoryboardSegue){
+        if let addFoodVC = segue.source as? DescriptionViewController{
             if let addFood = addFoodVC.foodForEdit{
                 if let selectedIndexPath = tableView.indexPathForSelectedRow{
                     foodList[(selectedIndexPath as NSIndexPath).row] = addFood
                     tableView.reloadRows(at: [selectedIndexPath], with: .none)
                 }else{
                     foodList.append(addFood)
-                   let newIndexPath = IndexPath(row: foodList.count-1, section: 0)
+                    let newIndexPath = IndexPath(row: foodList.count-1, section: 0)
                     tableView.insertRows(at: [newIndexPath], with: .automatic)
                 }
             }
         }
         saveFoodFile()
     }
+    
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
-        //section 的数量
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return foodList.count
-        //每一个section多少行
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)as! foodTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as! TableViewCell
 
-         //Configure the cell...
-//     cell.textLabel?.text = foodList[indexPath.row].foodTitle
-//        cell.detailTextLabel?.text = foodList[indexPath.row].foodContent
-        cell.avatarImage?.image = foodList[indexPath.row].foodAvatar
-        cell.titleText?.text = foodList[indexPath.row].foodTitle
-        cell.contentText?.text = foodList[indexPath.row].foodContent
+        // Configure the cell...
+        cell.foodName.text=foodList[indexPath.row].name
+        cell.foodDescription.text = foodList[indexPath.row].foodDescription
+        cell.foodImage.image = foodList[indexPath.row].foodAvatar
+        
+
         return cell
-        //z控制每一个cell
     }
  
 
@@ -112,6 +110,7 @@ class TableViewController: UITableViewController {
             // Delete the row from the data source
             foodList.remove(at: indexPath.row)
             saveFoodFile()
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -141,20 +140,20 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let  descriptionVC = segue.destination as! descriptionViewController
-        if(segue.identifier == "showDetail"){
         
-        if let selectedCell = sender as? UITableViewCell {
-            let indexPath = tableView.indexPath(for: selectedCell)!
-            let selectedFood = foodList[(indexPath as NSIndexPath).row]
-            descriptionVC.foodForEdit = selectedFood
-        }
-        print("show detail view")
-        }else{
-           descriptionVC.foodForEdit = food(name: "", description: "",foodAvatar: nil)
-            print("add new food")
+        let descriptionVC = segue.destination as! DescriptionViewController
+        if(segue.identifier == "showDetail"){
+            print("传送成功")
+            if let selectedCell = sender as? UITableViewCell{
+                let indexPath=tableView.indexPath(for: selectedCell)!
+                let selectedFood = foodList[( indexPath as NSIndexPath ).row]
+                descriptionVC.foodForEdit=selectedFood
+            }
+        }else if(segue.identifier == "addNewFood"){
+            print("传送失败")
+            descriptionVC.foodForEdit=Food(name: "", foodDescription: "",foodAvatar: nil)
         }
     }
- 
+    
 
 }
