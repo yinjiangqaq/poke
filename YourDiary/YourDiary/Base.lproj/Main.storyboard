@@ -45,25 +45,17 @@
                     <view key="view" contentMode="scaleToFill" id="Pyh-nx-Rzb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="日记编辑界面" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pX6-xc-Dx7">
-                                <rect key="frame" x="153.5" y="433" width="107" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="pX6-xc-Dx7" firstAttribute="centerY" secondItem="Pyh-nx-Rzb" secondAttribute="centerY" id="HnY-bF-O6d"/>
-                            <constraint firstItem="pX6-xc-Dx7" firstAttribute="centerX" secondItem="Pyh-nx-Rzb" secondAttribute="centerX" id="xPX-Oh-Xl2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="63w-uB-RRc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mfK-SL-S86">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="cwa-vy-pXk"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="LCM-al-tmv"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zel-I0-tNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3723" y="-514"/>
+            <point key="canvasLocation" x="4642.0289855072469" y="-514.28571428571422"/>
         </scene>
         <!--weather-->
         <scene sceneID="WEY-qJ-xE7">
@@ -242,6 +234,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6fR-wx-p9j" customClass="myTabBarController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="top" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="CBN-qf-gpt">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
@@ -259,6 +252,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEY-29-ecZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1758" y="147"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8X3-le-ysy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="56P-ae-vbL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vhk-FG-4qd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jUS-S7-onF" kind="relationship" relationship="rootViewController" id="PTd-h9-spu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAX-rG-RJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3731.884057971015" y="-514.28571428571422"/>
         </scene>
     </scenes>
 </document>
