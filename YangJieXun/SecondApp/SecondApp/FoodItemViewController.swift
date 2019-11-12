@@ -44,7 +44,7 @@ class FoodItemViewController: UIViewController, UINavigationControllerDelegate, 
     
     
     
-    func imagePickerController(_picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         self.foodImage.image = selectedImage
         dismiss(animated: true, completion: nil)
