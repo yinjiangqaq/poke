@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18173E97237AA27600DD974E /* images in Resources */ = {isa = PBXBuildFile; fileRef = 18173E96237AA27600DD974E /* images */; };
 		185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B014B237157E200AF5A98 /* myTabBarController.swift */; };
-		185B0150237169A900AF5A98 /* 日历.png in Resources */ = {isa = PBXBuildFile; fileRef = 185B014F237169A900AF5A98 /* 日历.png */; };
 		185B015223716C5600AF5A98 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015123716C5600AF5A98 /* loginViewController.swift */; };
 		185B015423716C7600AF5A98 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015323716C7600AF5A98 /* registerViewController.swift */; };
 		185B015623716CB400AF5A98 /* calendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015523716CB400AF5A98 /* calendarViewController.swift */; };
@@ -26,8 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18173E96237AA27600DD974E /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		185B014B237157E200AF5A98 /* myTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabBarController.swift; sourceTree = "<group>"; };
-		185B014F237169A900AF5A98 /* 日历.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "日历.png"; path = "../../../easyicon_201911050425378740/日历.png"; sourceTree = "<group>"; };
 		185B015123716C5600AF5A98 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		185B015323716C7600AF5A98 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		185B015523716CB400AF5A98 /* calendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarViewController.swift; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 		18F9D40F235EE4D200CFA3DE /* YourDiary */ = {
 			isa = PBXGroup;
 			children = (
-				185B014F237169A900AF5A98 /* 日历.png */,
 				185B014B237157E200AF5A98 /* myTabBarController.swift */,
+				18173E96237AA27600DD974E /* images */,
 				18F9D410235EE4D200CFA3DE /* AppDelegate.swift */,
 				18F9D414235EE4D200CFA3DE /* Main.storyboard */,
 				18F9D417235EE4D300CFA3DE /* Assets.xcassets */,
@@ -155,7 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185B0150237169A900AF5A98 /* 日历.png in Resources */,
+				18173E97237AA27600DD974E /* images in Resources */,
 				18F9D41B235EE4D300CFA3DE /* LaunchScreen.storyboard in Resources */,
 				18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */,
 				18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */,
@@ -327,7 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SH4442A2HH;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YourDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,7 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SH4442A2HH;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YourDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

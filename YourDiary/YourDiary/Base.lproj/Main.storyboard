@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6fR-wx-p9j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="56P-ae-vbL">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -42,16 +42,104 @@
         <scene sceneID="KVy-Uq-vb4">
             <objects>
                 <viewController title="diaryEdit" id="jUS-S7-onF" customClass="diaryEditViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pyh-nx-Rzb">
+                    <view key="view" contentMode="scaleToFill" id="OuR-Wf-fEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="63w-uB-RRc"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="     加个标题吧~" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d92-aB-rdY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cOY-Xn-wvC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="     记录你的一天" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xK-8p-QCB">
+                                <rect key="frame" x="0.0" y="148" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Q5r-Y4-88v"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8f-ZW-vck">
+                                <rect key="frame" x="0.0" y="448" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbO-mU-6gM">
+                                        <rect key="frame" x="49" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="6nG-nd-GGk"/>
+                                            <constraint firstAttribute="height" constant="30" id="XYk-fo-1cf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="pictureIcon.png"/>
+                                        <connections>
+                                            <action selector="tapPhoto:" destination="jUS-S7-onF" eventType="touchUpInside" id="0Bs-fj-M6U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e09-iJ-giZ">
+                                        <rect key="frame" x="95" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="I3z-oG-1gd"/>
+                                            <constraint firstAttribute="width" constant="30" id="pga-e6-Khy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="笑脸.png"/>
+                                        <connections>
+                                            <action selector="AddFeelingButton:" destination="jUS-S7-onF" eventType="touchUpInside" id="lVs-tu-ay7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4C0-Jb-cAN">
+                                        <rect key="frame" x="141" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Dn3-uL-7dW"/>
+                                            <constraint firstAttribute="height" constant="30" id="iEf-gi-2Jb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="阴天-天气.png"/>
+                                        <connections>
+                                            <action selector="AddWeatherButton:" destination="jUS-S7-onF" eventType="touchUpInside" id="8KM-c3-pzJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="e09-iJ-giZ" firstAttribute="centerY" secondItem="SbO-mU-6gM" secondAttribute="centerY" id="3Xa-b4-kfM"/>
+                                    <constraint firstAttribute="height" constant="50" id="3ub-9K-vOJ"/>
+                                    <constraint firstItem="e09-iJ-giZ" firstAttribute="leading" secondItem="SbO-mU-6gM" secondAttribute="trailing" constant="16" id="982-Mc-VNq"/>
+                                    <constraint firstItem="SbO-mU-6gM" firstAttribute="centerY" secondItem="v8f-ZW-vck" secondAttribute="centerY" id="Gz9-jm-g1o"/>
+                                    <constraint firstItem="SbO-mU-6gM" firstAttribute="leading" secondItem="v8f-ZW-vck" secondAttribute="leading" constant="49" id="NCE-Mx-93y"/>
+                                    <constraint firstItem="4C0-Jb-cAN" firstAttribute="leading" secondItem="e09-iJ-giZ" secondAttribute="trailing" constant="16" id="csD-JN-wxT"/>
+                                    <constraint firstItem="4C0-Jb-cAN" firstAttribute="bottom" secondItem="e09-iJ-giZ" secondAttribute="bottom" id="rh7-La-pTa"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="umH-KZ-wbf">
+                                <rect key="frame" x="87" y="299" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v8f-ZW-vck" firstAttribute="leading" secondItem="0xK-8p-QCB" secondAttribute="leading" id="0bQ-cs-Oca"/>
+                            <constraint firstItem="d92-aB-rdY" firstAttribute="leading" secondItem="ZfK-D6-r7G" secondAttribute="leading" id="CHa-6Q-Gvv"/>
+                            <constraint firstItem="v8f-ZW-vck" firstAttribute="top" secondItem="0xK-8p-QCB" secondAttribute="bottom" id="FSv-7g-2NV"/>
+                            <constraint firstItem="ZfK-D6-r7G" firstAttribute="trailing" secondItem="d92-aB-rdY" secondAttribute="trailing" id="LWP-xe-7gh"/>
+                            <constraint firstItem="0xK-8p-QCB" firstAttribute="leading" secondItem="d92-aB-rdY" secondAttribute="leading" id="YXK-Mu-kuk"/>
+                            <constraint firstItem="0xK-8p-QCB" firstAttribute="top" secondItem="d92-aB-rdY" secondAttribute="bottom" id="er0-eh-pLs"/>
+                            <constraint firstItem="0xK-8p-QCB" firstAttribute="trailing" secondItem="d92-aB-rdY" secondAttribute="trailing" id="hEv-dg-Y0H"/>
+                            <constraint firstItem="ZfK-D6-r7G" firstAttribute="trailing" secondItem="v8f-ZW-vck" secondAttribute="trailing" id="hn5-pP-4S7"/>
+                            <constraint firstItem="d92-aB-rdY" firstAttribute="top" secondItem="ZfK-D6-r7G" secondAttribute="top" id="tBw-c2-d8D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZfK-D6-r7G"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mfK-SL-S86">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="cwa-vy-pXk"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="LCM-al-tmv"/>
+                    <navigationItem key="navigationItem" title="DiaryEdit" id="mfK-SL-S86">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cwa-vy-pXk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LCM-al-tmv"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="DiaryContent" destination="0xK-8p-QCB" id="xoL-oi-vZR"/>
+                        <outlet property="DiaryTitle" destination="d92-aB-rdY" id="fjc-bB-QZt"/>
+                        <outlet property="Image1" destination="umH-KZ-wbf" id="RCU-5c-aJv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zel-I0-tNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -272,4 +360,9 @@
             <point key="canvasLocation" x="3731.884057971015" y="-514.28571428571422"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pictureIcon.png" width="200" height="200"/>
+        <image name="笑脸.png" width="200" height="200"/>
+        <image name="阴天-天气.png" width="200" height="200"/>
+    </resources>
 </document>

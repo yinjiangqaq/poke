@@ -10,11 +10,11 @@ import Foundation
 
 class user: NSObject, NSCoding {
     func encode(with aCoder: NSCoder) {
-        <#code#>
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
-        <#code#>
+        
     }
     
     var userName: String?

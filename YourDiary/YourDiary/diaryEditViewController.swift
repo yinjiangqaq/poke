@@ -8,12 +8,55 @@
 
 import UIKit
 
-class diaryEditViewController: UIViewController {
+class diaryEditViewController: UIViewController , UINavigationControllerDelegate , UIImagePickerControllerDelegate{
+    
+    
+
+    @IBOutlet weak var Image1: UIImageView!
+    
+    @IBOutlet weak var DiaryTitle: UITextField!
+    @IBOutlet weak var DiaryContent: UITextField!
+    
+    
+    @IBAction func AddFeelingButton(_ sender: Any) {
+    }
+    
+    @IBAction func AddWeatherButton(_ sender: Any) {
+    }
+    
+    
+    @IBAction func takePhoto(_ sender: Any ){
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func tapPhoto(_ sender: Any ){
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        self.Image1.image = selectedImage
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
+        
+        
+        
     }
     
 
