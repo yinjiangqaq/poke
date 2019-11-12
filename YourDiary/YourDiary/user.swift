@@ -10,14 +10,21 @@ import Foundation
 
 class user: NSObject, NSCoding {
     func encode(with aCoder: NSCoder) {
-        <#code#>
+        aCoder.encode(userName, forKey: "nameKey")
+        aCoder.encode(userSex, forKey: "sexKey")
     }
     
     required init?(coder aDecoder: NSCoder) {
-        <#code#>
+        userName = aDecoder.decodeObject(forKey: "nameKey") as? String
+        userSex = aDecoder.decodeObject(forKey: "sexKey") as? String
     }
-    
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     var userName: String?
     var userSex: String?
     
+    init( userName: String?, userSex: String?) {
+        
+        self.userName = userName
+        self.userSex = userSex
+    }
 }

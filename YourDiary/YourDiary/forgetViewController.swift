@@ -9,14 +9,22 @@
 import UIKit
 
 class forgetViewController: UIViewController {
-
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    (UIImage *)clipImage2:(UIImage *)image do {
+        UIGraphicsBeginImageContextWithOptions(image.size, NO, 1.0);
+        
+        CGRect; rect = CGRectMake(0, 0, image.size.width, image.size.height);
+        [[UIBezierPath, bezierPathWithRoundedRect:rect cornerRadius:image.size.width / 2] addClip];
+        
+        [image, drawInRect:rect];
+        
+        UIImage; *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return newImage;
+    }   // Do any additional setup after loading the view.
     }
-    
-
     /*
     // MARK: - Navigation
 

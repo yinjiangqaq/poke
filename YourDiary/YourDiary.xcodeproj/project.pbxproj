@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B014B237157E200AF5A98 /* myTabBarController.swift */; };
-		185B0150237169A900AF5A98 /* 日历.png in Resources */ = {isa = PBXBuildFile; fileRef = 185B014F237169A900AF5A98 /* 日历.png */; };
 		185B015223716C5600AF5A98 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015123716C5600AF5A98 /* loginViewController.swift */; };
 		185B015423716C7600AF5A98 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015323716C7600AF5A98 /* registerViewController.swift */; };
 		185B015623716CB400AF5A98 /* calendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015523716CB400AF5A98 /* calendarViewController.swift */; };
@@ -20,6 +19,8 @@
 		185B016223716E9F00AF5A98 /* personEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B016123716E9F00AF5A98 /* personEditViewController.swift */; };
 		185B0164237172B200AF5A98 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B0163237172B200AF5A98 /* user.swift */; };
 		18F91959237A8857008134B0 /* forgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F91958237A8857008134B0 /* forgetViewController.swift */; };
+		18F9195D237AA2B3008134B0 /* 69CD8AB33476B281929F7B291952D13F.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9195C237AA2B3008134B0 /* 69CD8AB33476B281929F7B291952D13F.png */; };
+		18F9195F237AA391008134B0 /* 303AA35306469C8281D856E2CC19184A.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18F9195E237AA391008134B0 /* 303AA35306469C8281D856E2CC19184A.jpg */; };
 		18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9D410235EE4D200CFA3DE /* AppDelegate.swift */; };
 		18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D414235EE4D200CFA3DE /* Main.storyboard */; };
 		18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D417235EE4D300CFA3DE /* Assets.xcassets */; };
@@ -28,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		185B014B237157E200AF5A98 /* myTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabBarController.swift; sourceTree = "<group>"; };
-		185B014F237169A900AF5A98 /* 日历.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "日历.png"; path = "../../../easyicon_201911050425378740/日历.png"; sourceTree = "<group>"; };
 		185B015123716C5600AF5A98 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		185B015323716C7600AF5A98 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		185B015523716CB400AF5A98 /* calendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +40,8 @@
 		185B016123716E9F00AF5A98 /* personEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personEditViewController.swift; sourceTree = "<group>"; };
 		185B0163237172B200AF5A98 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		18F91958237A8857008134B0 /* forgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetViewController.swift; sourceTree = "<group>"; };
+		18F9195C237AA2B3008134B0 /* 69CD8AB33476B281929F7B291952D13F.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 69CD8AB33476B281929F7B291952D13F.png; path = ../../../69CD8AB33476B281929F7B291952D13F.png; sourceTree = "<group>"; };
+		18F9195E237AA391008134B0 /* 303AA35306469C8281D856E2CC19184A.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 303AA35306469C8281D856E2CC19184A.jpg; path = ../../../303AA35306469C8281D856E2CC19184A.jpg; sourceTree = "<group>"; };
 		18F9D40D235EE4D200CFA3DE /* YourDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F9D410235EE4D200CFA3DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F9D415235EE4D200CFA3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,10 +80,11 @@
 		18F9D40F235EE4D200CFA3DE /* YourDiary */ = {
 			isa = PBXGroup;
 			children = (
-				185B014F237169A900AF5A98 /* 日历.png */,
+				18F9195C237AA2B3008134B0 /* 69CD8AB33476B281929F7B291952D13F.png */,
 				185B014B237157E200AF5A98 /* myTabBarController.swift */,
 				18F9D410235EE4D200CFA3DE /* AppDelegate.swift */,
 				18F9D414235EE4D200CFA3DE /* Main.storyboard */,
+				18F9195E237AA391008134B0 /* 303AA35306469C8281D856E2CC19184A.jpg */,
 				18F91958237A8857008134B0 /* forgetViewController.swift */,
 				18F9D417235EE4D300CFA3DE /* Assets.xcassets */,
 				18F9D419235EE4D300CFA3DE /* LaunchScreen.storyboard */,
@@ -158,10 +161,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185B0150237169A900AF5A98 /* 日历.png in Resources */,
 				18F9D41B235EE4D300CFA3DE /* LaunchScreen.storyboard in Resources */,
+				18F9195D237AA2B3008134B0 /* 69CD8AB33476B281929F7B291952D13F.png in Resources */,
 				18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */,
 				18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */,
+				18F9195F237AA391008134B0 /* 303AA35306469C8281D856E2CC19184A.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
