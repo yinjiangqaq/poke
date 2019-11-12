@@ -19,6 +19,7 @@
 		185B016023716DFE00AF5A98 /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015F23716DFE00AF5A98 /* note.swift */; };
 		185B016223716E9F00AF5A98 /* personEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B016123716E9F00AF5A98 /* personEditViewController.swift */; };
 		185B0164237172B200AF5A98 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B0163237172B200AF5A98 /* user.swift */; };
+		18F91959237A8857008134B0 /* forgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F91958237A8857008134B0 /* forgetViewController.swift */; };
 		18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9D410235EE4D200CFA3DE /* AppDelegate.swift */; };
 		18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D414235EE4D200CFA3DE /* Main.storyboard */; };
 		18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D417235EE4D300CFA3DE /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		185B015F23716DFE00AF5A98 /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
 		185B016123716E9F00AF5A98 /* personEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personEditViewController.swift; sourceTree = "<group>"; };
 		185B0163237172B200AF5A98 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		18F91958237A8857008134B0 /* forgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetViewController.swift; sourceTree = "<group>"; };
 		18F9D40D235EE4D200CFA3DE /* YourDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F9D410235EE4D200CFA3DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F9D415235EE4D200CFA3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				185B014B237157E200AF5A98 /* myTabBarController.swift */,
 				18F9D410235EE4D200CFA3DE /* AppDelegate.swift */,
 				18F9D414235EE4D200CFA3DE /* Main.storyboard */,
+				18F91958237A8857008134B0 /* forgetViewController.swift */,
 				18F9D417235EE4D300CFA3DE /* Assets.xcassets */,
 				18F9D419235EE4D300CFA3DE /* LaunchScreen.storyboard */,
 				18F9D41C235EE4D300CFA3DE /* Info.plist */,
@@ -172,6 +175,7 @@
 				185B015223716C5600AF5A98 /* loginViewController.swift in Sources */,
 				185B016023716DFE00AF5A98 /* note.swift in Sources */,
 				185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */,
+				18F91959237A8857008134B0 /* forgetViewController.swift in Sources */,
 				185B015423716C7600AF5A98 /* registerViewController.swift in Sources */,
 				185B015623716CB400AF5A98 /* calendarViewController.swift in Sources */,
 				185B015E23716DC700AF5A98 /* diaryEditViewController.swift in Sources */,
