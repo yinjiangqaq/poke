@@ -23,6 +23,8 @@
 		18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D414235EE4D200CFA3DE /* Main.storyboard */; };
 		18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D417235EE4D300CFA3DE /* Assets.xcassets */; };
 		18F9D41B235EE4D300CFA3DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D419235EE4D300CFA3DE /* LaunchScreen.storyboard */; };
+		F0C409D2238196CD006DB926 /* weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C409D1238196CD006DB926 /* weather.swift */; };
+		F0C409D4238197E6006DB926 /* weather.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C409D3238197E6006DB926 /* weather.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		18F9D417235EE4D300CFA3DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F9D41A235EE4D300CFA3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F9D41C235EE4D300CFA3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0C409D1238196CD006DB926 /* weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather.swift; sourceTree = "<group>"; };
+		F0C409D3238197E6006DB926 /* weather.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = weather.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +80,8 @@
 		18F9D40F235EE4D200CFA3DE /* YourDiary */ = {
 			isa = PBXGroup;
 			children = (
-				185B014B237157E200AF5A98 /* myTabBarController.swift */,
 				18173E96237AA27600DD974E /* images */,
+				185B014B237157E200AF5A98 /* myTabBarController.swift */,
 				18F9D410235EE4D200CFA3DE /* AppDelegate.swift */,
 				18F9D414235EE4D200CFA3DE /* Main.storyboard */,
 				18F9D417235EE4D300CFA3DE /* Assets.xcassets */,
@@ -89,10 +93,12 @@
 				185B015723716CC700AF5A98 /* personalViewController.swift */,
 				185B015923716CEB00AF5A98 /* historyViewController.swift */,
 				185B015B23716DB000AF5A98 /* weatherViewController.swift */,
-				185B015D23716DC700AF5A98 /* diaryEditViewController.swift */,
 				185B015F23716DFE00AF5A98 /* note.swift */,
 				185B016123716E9F00AF5A98 /* personEditViewController.swift */,
 				185B0163237172B200AF5A98 /* user.swift */,
+				185B015D23716DC700AF5A98 /* diaryEditViewController.swift */,
+				F0C409D1238196CD006DB926 /* weather.swift */,
+				F0C409D3238197E6006DB926 /* weather.xib */,
 			);
 			path = YourDiary;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 				18173E97237AA27600DD974E /* images in Resources */,
 				18F9D41B235EE4D300CFA3DE /* LaunchScreen.storyboard in Resources */,
 				18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */,
+				F0C409D4238197E6006DB926 /* weather.xib in Resources */,
 				18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +187,7 @@
 				185B0164237172B200AF5A98 /* user.swift in Sources */,
 				185B015C23716DB000AF5A98 /* weatherViewController.swift in Sources */,
 				18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */,
+				F0C409D2238196CD006DB926 /* weather.swift in Sources */,
 				185B015A23716CEB00AF5A98 /* historyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

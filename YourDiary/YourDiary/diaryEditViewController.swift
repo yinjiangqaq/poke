@@ -18,9 +18,21 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     @IBOutlet weak var DiaryContent: UITextField!
     
     
+    @IBOutlet weak var AddFeeling: UIButton!
     @IBAction func AddFeelingButton(_ sender: Any) {
+        let myAlert = weather(frame: CGRect(x: 0 , y: 0 , width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height))
+        
+        //各种callback
+        myAlert.buttonCallBack = {() -> () in
+            myAlert.removeFromSuperview()
+            print("click it")
+        }
+        
+        self.view.addSubview(myAlert)
+        
     }
     
+    @IBOutlet weak var AddWeather: UIButton!
     @IBAction func AddWeatherButton(_ sender: Any) {
     }
     
@@ -59,7 +71,42 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        let myAlert = weather(frame: CGRect(x: 0 , y: 0 , width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height))
+//
+//        myAlert.buttonCallBack = {() -> () in
+//            myAlert.removeFromSuperview()
+//            print("click it")
+//        }
+//        self.view.addSubview(myAlert)
+        
+       // AddFeeling.addTarget(self, action: #selector(AddFeelingFunction), for: .touchUpInside)
+       // self.view.addSubview(AddFeeling)
+        
+       // AddWeather.addTarget(self, action: #selector(AddWeatherFunction), for: .touchUpInside)
+       // self.view.addSubview(AddWeather)
+        
+        
+        
+        
+    }
+    
+//    @objc func AddFeelingFunction(){
+//
+//    }
+//
+//    @objc func AddWeatherFunction(){
+//
+//    }
+    
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
     /*
     // MARK: - Navigation
 
