@@ -73,7 +73,9 @@
                                             <constraint firstAttribute="width" constant="30" id="6nG-nd-GGk"/>
                                             <constraint firstAttribute="height" constant="30" id="XYk-fo-1cf"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="pictureIcon.png"/>
+                                        <state key="normal" title="Button" image="pictureIcon.png">
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="tapPhoto:" destination="jUS-S7-onF" eventType="touchUpInside" id="0Bs-fj-M6U"/>
                                         </connections>
@@ -84,7 +86,9 @@
                                             <constraint firstAttribute="height" constant="30" id="I3z-oG-1gd"/>
                                             <constraint firstAttribute="width" constant="30" id="pga-e6-Khy"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="笑脸.png"/>
+                                        <state key="normal" title="Button" image="smile.png">
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="AddFeelingButton:" destination="jUS-S7-onF" eventType="touchUpInside" id="lVs-tu-ay7"/>
                                         </connections>
@@ -95,7 +99,9 @@
                                             <constraint firstAttribute="width" constant="30" id="Dn3-uL-7dW"/>
                                             <constraint firstAttribute="height" constant="30" id="iEf-gi-2Jb"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="阴天-天气.png"/>
+                                        <state key="normal" title="Button" image="weather.png">
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="AddWeatherButton:" destination="jUS-S7-onF" eventType="touchUpInside" id="8KM-c3-pzJ"/>
                                         </connections>
@@ -136,6 +142,8 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="LCM-al-tmv"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="AddFeeling" destination="e09-iJ-giZ" id="tYp-Wy-4VS"/>
+                        <outlet property="AddWeather" destination="4C0-Jb-cAN" id="crb-Rw-zty"/>
                         <outlet property="DiaryContent" destination="0xK-8p-QCB" id="xoL-oi-vZR"/>
                         <outlet property="DiaryTitle" destination="d92-aB-rdY" id="fjc-bB-QZt"/>
                         <outlet property="Image1" destination="umH-KZ-wbf" id="RCU-5c-aJv"/>
@@ -362,7 +370,7 @@
     </scenes>
     <resources>
         <image name="pictureIcon.png" width="200" height="200"/>
-        <image name="笑脸.png" width="200" height="200"/>
-        <image name="阴天-天气.png" width="200" height="200"/>
+        <image name="smile.png" width="200" height="200"/>
+        <image name="weather.png" width="200" height="200"/>
     </resources>
 </document>
