@@ -12,7 +12,11 @@ class weather: UIView {
     
     var ConnectView : UIView!
     
-    
+//    func getSelectImage()->String{
+//        //return selectImage
+//        return "get an image"
+//    }
+ 
     @IBAction func Tap(_ sender: Any) {
         if tapCallBack != nil {
             tapCallBack!()
@@ -20,56 +24,56 @@ class weather: UIView {
     }
     
     @IBAction func qing(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func yin(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func dayu(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func duoyun(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func baoyu(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func wu(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func zhenyu(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func xiaoxue(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func shachenbao(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
@@ -80,16 +84,19 @@ class weather: UIView {
 //    }
 //
 //    var buttonCallBack:(() -> ())?
+    
+    var testCallBack: ((String)->())?
+    
     var tapCallBack:(() -> ())?
-    var qingCallBack:(() -> ())?
-    var yinCallBack:(() -> ())?
-    var dayuCallBack:(() -> ())?
-    var duoyunCallBack:(() -> ())?
-    var baoyuCallBack:(() -> ())?
-    var wuCallBack:(() -> ())?
-    var zhenyuCallBack:(() -> ())?
-    var xiaoxueCallBack:(() -> ())?
-    var shachenbaoCallBack:(() -> ())?
+//    var qingCallBack:(() -> ())?
+//    var yinCallBack:(() -> ())?
+//    var dayuCallBack:(() -> ())?
+//    var duoyunCallBack:(() -> ())?
+//    var baoyuCallBack:(() -> ())?
+//    var wuCallBack:(() -> ())?
+//    var zhenyuCallBack:(() -> ())?
+//    var xiaoxueCallBack:(() -> ())?
+//    var shachenbaoCallBack:(() -> ())?
     
     
     

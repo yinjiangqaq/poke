@@ -20,70 +20,70 @@ class feeling: UIView {
     }
     
     @IBAction func happy(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func angry(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func unhappy(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func laugh(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func cry(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     
     @IBAction func feelTired(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func normal(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func money(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
     
     @IBAction func shock(_ sender: Any) {
-        if tapCallBack != nil {
-            tapCallBack!()
+        if testCallBack != nil {
+            testCallBack!("get an image")
         }
     }
-    
+    var testCallBack: ((String)->())?
     var tapCallBack:(() -> ())?
-    var happyCallBack:(() -> ())?
-    var angryCallBack:(() -> ())?
-    var unhappyCallBack:(() -> ())?
-    var laughCallBack:(() -> ())?
-    var cryCallBack:(() -> ())?
-    var feelTiredCallBack:(() -> ())?
-    var normalCallBack:(() -> ())?
-    var moneyCallBack:(() -> ())?
-    var shockCallBack:(() -> ())?
+//    var happyCallBack:(() -> ())?
+//    var angryCallBack:(() -> ())?
+//    var unhappyCallBack:(() -> ())?
+//    var laughCallBack:(() -> ())?
+//    var cryCallBack:(() -> ())?
+//    var feelTiredCallBack:(() -> ())?
+//    var normalCallBack:(() -> ())?
+//    var moneyCallBack:(() -> ())?
+//    var shockCallBack:(() -> ())?
     
     
     

@@ -28,6 +28,13 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
             print("click feeling")
         }
         
+        myAlert.testCallBack = {(testString) in
+            print("get message "+testString)
+            //self.DiaryTitle.text=testString
+            myAlert.removeFromSuperview()
+        }
+        
+        
         self.view.addSubview(myAlert)
     }
     
@@ -39,6 +46,13 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
         myAlert.tapCallBack = {() -> () in
             myAlert.removeFromSuperview()
             print("click weather")
+        }
+        
+        
+        myAlert.testCallBack = {(testString) in
+            print("get message "+testString)
+            //self.DiaryTitle.text=testString
+            myAlert.removeFromSuperview()
         }
         
         self.view.addSubview(myAlert)
