@@ -10,13 +10,21 @@ import UIKit
 
 class personalViewController: UIViewController {
 
+    @IBOutlet weak var my: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
+    // MARK: - Table view data source
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 5
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.my.dequeueReusableCell(withIdentifier: "cell1", for: indexPath as IndexPath)
+        return cell
+    }
     /*
     // MARK: - Navigation
 
