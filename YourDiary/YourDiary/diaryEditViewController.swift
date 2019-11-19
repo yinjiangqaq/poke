@@ -20,6 +20,15 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     
     @IBOutlet weak var AddFeeling: UIButton!
     @IBAction func AddFeelingButton(_ sender: Any) {
+        let myAlert = feeling(frame: CGRect(x: 0 , y: 0 , width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height))
+        
+        //各种callback
+        myAlert.tapCallBack = {() -> () in
+            myAlert.removeFromSuperview()
+            print("click feeling")
+        }
+        
+        self.view.addSubview(myAlert)
     }
     
     @IBOutlet weak var AddWeather: UIButton!
@@ -35,14 +44,8 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
         self.view.addSubview(myAlert)
     }
     
-    
-    @IBAction func takePhoto(_ sender: Any ){
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
+
+    //上传图片
     @IBAction func tapPhoto(_ sender: Any ){
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
@@ -56,13 +59,13 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
         self.Image1.image = selectedImage
         dismiss(animated: true, completion: nil)
     }
-    
+    ////////////////////
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DiaryTitle.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
         
@@ -122,23 +125,23 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     }
     */
     
-    @IBAction func beginEdit(_ sender: UITextField) {
-        animateViewMoving(up: true, moveValue: 100)
-    }
-
-    @IBAction func endEdit(_ sender: UITextField) {
-        animateViewMoving(up: false, moveValue: 100)
-    }
-
-    func animateViewMoving (up:Bool, moveValue :CGFloat){
-        let movementDuration:TimeInterval = 0.3
-        let movement:CGFloat = ( up ? -moveValue : moveValue)
-        UIView.beginAnimations( "animateView", context: nil)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        UIView.setAnimationDuration(movementDuration )
-        self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
-        UIView.commitAnimations()
-    }
+//    @IBAction func beginEdit(_ sender: UITextField) {
+//        animateViewMoving(up: true, moveValue: 100)
+//    }
+//
+//    @IBAction func endEdit(_ sender: UITextField) {
+//        animateViewMoving(up: false, moveValue: 100)
+//    }
+//
+//    func animateViewMoving (up:Bool, moveValue :CGFloat){
+//        let movementDuration:TimeInterval = 0.3
+//        let movement:CGFloat = ( up ? -moveValue : moveValue)
+//        UIView.beginAnimations( "animateView", context: nil)
+//        UIView.setAnimationBeginsFromCurrentState(true)
+//        UIView.setAnimationDuration(movementDuration )
+//        self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
+//        UIView.commitAnimations()
+//    }
     
 
 }

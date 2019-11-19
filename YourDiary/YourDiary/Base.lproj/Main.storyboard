@@ -67,55 +67,56 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8f-ZW-vck">
                                 <rect key="frame" x="0.0" y="448" width="414" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbO-mU-6gM">
-                                        <rect key="frame" x="49" y="10" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="6nG-nd-GGk"/>
-                                            <constraint firstAttribute="height" constant="30" id="XYk-fo-1cf"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="pictureIcon.png">
-                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tapPhoto:" destination="jUS-S7-onF" eventType="touchUpInside" id="0Bs-fj-M6U"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e09-iJ-giZ">
-                                        <rect key="frame" x="95" y="10" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="I3z-oG-1gd"/>
-                                            <constraint firstAttribute="width" constant="30" id="pga-e6-Khy"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="smile.png">
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="AddFeelingButton:" destination="jUS-S7-onF" eventType="touchUpInside" id="lVs-tu-ay7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4C0-Jb-cAN">
-                                        <rect key="frame" x="141" y="10" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="Dn3-uL-7dW"/>
-                                            <constraint firstAttribute="height" constant="30" id="iEf-gi-2Jb"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="weather.png">
-                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="AddWeatherButton:" destination="jUS-S7-onF" eventType="touchUpInside" id="8KM-c3-pzJ"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="l19-L9-YXT">
+                                        <rect key="frame" x="102" y="10" width="210" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbO-mU-6gM">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="6nG-nd-GGk"/>
+                                                    <constraint firstAttribute="height" constant="30" id="XYk-fo-1cf"/>
+                                                </constraints>
+                                                <state key="normal" image="pictureIcon">
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tapPhoto:" destination="jUS-S7-onF" eventType="touchUpInside" id="0Bs-fj-M6U"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e09-iJ-giZ">
+                                                <rect key="frame" x="90" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="I3z-oG-1gd"/>
+                                                    <constraint firstAttribute="width" constant="30" id="pga-e6-Khy"/>
+                                                </constraints>
+                                                <state key="normal" image="smileIcon">
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="AddFeelingButton:" destination="jUS-S7-onF" eventType="touchUpInside" id="lVs-tu-ay7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4C0-Jb-cAN">
+                                                <rect key="frame" x="180" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="Dn3-uL-7dW"/>
+                                                    <constraint firstAttribute="height" constant="30" id="iEf-gi-2Jb"/>
+                                                </constraints>
+                                                <state key="normal" image="weatherIcon">
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="AddWeatherButton:" destination="jUS-S7-onF" eventType="touchUpInside" id="8KM-c3-pzJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="e09-iJ-giZ" firstAttribute="centerY" secondItem="SbO-mU-6gM" secondAttribute="centerY" id="3Xa-b4-kfM"/>
                                     <constraint firstAttribute="height" constant="50" id="3ub-9K-vOJ"/>
-                                    <constraint firstItem="e09-iJ-giZ" firstAttribute="leading" secondItem="SbO-mU-6gM" secondAttribute="trailing" constant="16" id="982-Mc-VNq"/>
-                                    <constraint firstItem="SbO-mU-6gM" firstAttribute="centerY" secondItem="v8f-ZW-vck" secondAttribute="centerY" id="Gz9-jm-g1o"/>
-                                    <constraint firstItem="SbO-mU-6gM" firstAttribute="leading" secondItem="v8f-ZW-vck" secondAttribute="leading" constant="49" id="NCE-Mx-93y"/>
-                                    <constraint firstItem="4C0-Jb-cAN" firstAttribute="leading" secondItem="e09-iJ-giZ" secondAttribute="trailing" constant="16" id="csD-JN-wxT"/>
-                                    <constraint firstItem="4C0-Jb-cAN" firstAttribute="bottom" secondItem="e09-iJ-giZ" secondAttribute="bottom" id="rh7-La-pTa"/>
+                                    <constraint firstItem="l19-L9-YXT" firstAttribute="centerY" secondItem="v8f-ZW-vck" secondAttribute="centerY" id="hfr-Cc-IeR"/>
+                                    <constraint firstItem="l19-L9-YXT" firstAttribute="centerX" secondItem="v8f-ZW-vck" secondAttribute="centerX" id="uCT-iY-ZwH"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="umH-KZ-wbf">
@@ -369,8 +370,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pictureIcon.png" width="200" height="200"/>
-        <image name="smile.png" width="200" height="200"/>
-        <image name="weather.png" width="200" height="200"/>
+        <image name="pictureIcon" width="200" height="200"/>
+        <image name="smileIcon" width="200" height="200"/>
+        <image name="weatherIcon" width="200" height="200"/>
     </resources>
 </document>
