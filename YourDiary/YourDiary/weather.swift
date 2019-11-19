@@ -9,13 +9,96 @@
 import UIKit
 
 class weather: UIView {
-
-    @IBOutlet weak var TestDisplayBtn: UIButton!
     
     var ConnectView : UIView!
     
-    var buttonCallBack:(() -> ())?
     
+    @IBAction func Tap(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    @IBAction func qing(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    @IBAction func yin(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    @IBAction func dayu(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    @IBAction func duoyun(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    @IBAction func baoyu(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    @IBAction func wu(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    @IBAction func zhenyu(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    @IBAction func xiaoxue(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    @IBAction func shachenbao(_ sender: Any) {
+        if tapCallBack != nil {
+            tapCallBack!()
+        }
+    }
+    
+    //    @IBAction func AlertBtnAction(_ sender: Any) {
+//        if buttonCallBack != nil {
+//            buttonCallBack!()
+//        }
+//    }
+//
+//    var buttonCallBack:(() -> ())?
+    var tapCallBack:(() -> ())?
+    var qingCallBack:(() -> ())?
+    var yinCallBack:(() -> ())?
+    var dayuCallBack:(() -> ())?
+    var duoyunCallBack:(() -> ())?
+    var baoyuCallBack:(() -> ())?
+    var wuCallBack:(() -> ())?
+    var zhenyuCallBack:(() -> ())?
+    var xiaoxueCallBack:(() -> ())?
+    var shachenbaoCallBack:(() -> ())?
+    
+    
+    
+    
+    func initialSetup(){
+        self.backgroundColor = UIColor(red: 0/225.0, green: 0/225.0, blue: 0/225.0, alpha: 0.3)
+    }
+    
+    //从这里开始初始化，不用改
     override init(frame: CGRect) {
         super.init(frame: frame)
         ConnectView = loadViewFromNib()
@@ -61,19 +144,9 @@ class weather: UIView {
                                         multiplier: 1, constant: 0)
         addConstraint(constraint)
     }
+    //尾部
     
     
-    func initialSetup(){
-        self.backgroundColor = UIColor(red: 0/225.0, green: 0/225.0, blue: 0/225.0, alpha: 0.3)
-        
-    }
-    
-    
-    @IBAction func AlertBtnAction(_ sender: Any) {
-        if buttonCallBack != nil {
-            buttonCallBack!()
-        }
-    }
     
     /*
     // Only override draw() if you perform custom drawing.
