@@ -21,56 +21,56 @@ class feeling: UIView {
     
     @IBAction func happy(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("1")
         }
     }
     
     @IBAction func angry(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("2")
         }
     }
     
     @IBAction func unhappy(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("3")
         }
     }
     
     @IBAction func laugh(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("4")
         }
     }
     
     @IBAction func cry(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("5")
         }
     }
     
     
     @IBAction func feelTired(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("6")
         }
     }
     
     @IBAction func normal(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("7")
         }
     }
     
     @IBAction func money(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("8")
         }
     }
     
     @IBAction func shock(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("9")
         }
     }
     var testCallBack: ((String)->())?

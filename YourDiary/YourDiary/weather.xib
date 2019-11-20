@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="OIy-O6-6DI">
-                    <rect key="frame" x="102" y="318.5" width="210" height="259.5"/>
+                    <rect key="frame" x="102" y="174" width="210" height="259.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择天气" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmy-b6-7Dx">
                             <rect key="frame" x="58.5" y="0.0" width="93.5" height="27.5"/>
@@ -158,8 +158,9 @@
             </subviews>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="OIy-O6-6DI" firstAttribute="centerY" secondItem="ZBD-It-RFA" secondAttribute="centerY" id="7gQ-Qc-J70"/>
-                <constraint firstItem="OIy-O6-6DI" firstAttribute="centerX" secondItem="ZBD-It-RFA" secondAttribute="centerX" id="bJm-lt-qPo"/>
+                <constraint firstItem="t56-4Z-zFy" firstAttribute="trailing" secondItem="OIy-O6-6DI" secondAttribute="trailing" constant="102" id="9oM-26-5u3"/>
+                <constraint firstItem="OIy-O6-6DI" firstAttribute="leading" secondItem="t56-4Z-zFy" secondAttribute="leading" constant="102" id="JOz-zG-FVT"/>
+                <constraint firstItem="OIy-O6-6DI" firstAttribute="top" secondItem="t56-4Z-zFy" secondAttribute="top" constant="130" id="PB7-ol-fas"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="t56-4Z-zFy"/>

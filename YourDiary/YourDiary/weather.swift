@@ -25,55 +25,55 @@ class weather: UIView {
     
     @IBAction func qing(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("qing")
         }
     }
     
     @IBAction func yin(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("yin")
         }
     }
     
     @IBAction func dayu(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("dayu")
         }
     }
     
     @IBAction func duoyun(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("duoyun")
         }
     }
     
     @IBAction func baoyu(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("baoyu")
         }
     }
     
     @IBAction func wu(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("wu")
         }
     }
     
     @IBAction func zhenyu(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("zhenyu")
         }
     }
     
     @IBAction func xiaoxue(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("xiaoxue")
         }
     }
     
     @IBAction func shachenbao(_ sender: Any) {
         if testCallBack != nil {
-            testCallBack!("get an image")
+            testCallBack!("shachenbao")
         }
     }
     

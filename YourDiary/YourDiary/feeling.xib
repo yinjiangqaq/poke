@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="nMa-Fz-k8z">
-                    <rect key="frame" x="102" y="318" width="210" height="260.5"/>
+                    <rect key="frame" x="102" y="174" width="210" height="260.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当下心情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkU-EZ-tIt">
                             <rect key="frame" x="58.5" y="0.0" width="93.5" height="27.5"/>
@@ -158,8 +158,9 @@
             </subviews>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="nMa-Fz-k8z" firstAttribute="centerY" secondItem="OC9-wg-0EJ" secondAttribute="centerY" id="IEn-AY-BDi"/>
-                <constraint firstItem="nMa-Fz-k8z" firstAttribute="centerX" secondItem="OC9-wg-0EJ" secondAttribute="centerX" id="hIy-r6-4pD"/>
+                <constraint firstItem="nMa-Fz-k8z" firstAttribute="top" secondItem="h60-fj-8FS" secondAttribute="top" constant="130" id="7gH-yV-OqM"/>
+                <constraint firstItem="h60-fj-8FS" firstAttribute="trailing" secondItem="nMa-Fz-k8z" secondAttribute="trailing" constant="102" id="8BU-fm-AhW"/>
+                <constraint firstItem="nMa-Fz-k8z" firstAttribute="leading" secondItem="h60-fj-8FS" secondAttribute="leading" constant="102" id="YWe-Jw-qUt"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="h60-fj-8FS"/>
             <connections>
