@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183F6D012383E4F0006F2A19 /* liulan.png in Resources */ = {isa = PBXBuildFile; fileRef = 183F6D002383E4F0006F2A19 /* liulan.png */; };
 		185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B014B237157E200AF5A98 /* myTabBarController.swift */; };
 		185B015223716C5600AF5A98 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015123716C5600AF5A98 /* loginViewController.swift */; };
 		185B015423716C7600AF5A98 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015323716C7600AF5A98 /* registerViewController.swift */; };
@@ -17,6 +18,9 @@
 		185B016023716DFE00AF5A98 /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015F23716DFE00AF5A98 /* note.swift */; };
 		185B016223716E9F00AF5A98 /* personEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B016123716E9F00AF5A98 /* personEditViewController.swift */; };
 		185B0164237172B200AF5A98 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B0163237172B200AF5A98 /* user.swift */; };
+		18B4BA342383E2DE0068ACD7 /* rili.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B4BA332383E2DE0068ACD7 /* rili.png */; };
+		18B4BA362383E3E40068ACD7 /* wode.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B4BA352383E3E30068ACD7 /* wode.png */; };
+		18E1935A237A970D00784D9C /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E19359237A970C00784D9C /* logo.jpg */; };
 		18C33AB52383D17C0011FE45 /* feeling.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C33AB42383D17C0011FE45 /* feeling.xib */; };
 		18C33AB72383D1A10011FE45 /* feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C33AB62383D1A10011FE45 /* feeling.swift */; };
 		18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9D410235EE4D200CFA3DE /* AppDelegate.swift */; };
@@ -28,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183F6D002383E4F0006F2A19 /* liulan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = liulan.png; path = ../../../liulan.png; sourceTree = "<group>"; };
 		185B014B237157E200AF5A98 /* myTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabBarController.swift; sourceTree = "<group>"; };
 		185B015123716C5600AF5A98 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		185B015323716C7600AF5A98 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		185B015F23716DFE00AF5A98 /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
 		185B016123716E9F00AF5A98 /* personEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personEditViewController.swift; sourceTree = "<group>"; };
 		185B0163237172B200AF5A98 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		18B4BA332383E2DE0068ACD7 /* rili.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rili.png; path = ../../../rili.png; sourceTree = "<group>"; };
+		18B4BA352383E3E30068ACD7 /* wode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wode.png; path = ../../../wode.png; sourceTree = "<group>"; };
+		18E19359237A970C00784D9C /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = ../../../logo.jpg; sourceTree = "<group>"; };
 		18C33AB42383D17C0011FE45 /* feeling.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = feeling.xib; sourceTree = "<group>"; };
 		18C33AB62383D1A10011FE45 /* feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feeling.swift; sourceTree = "<group>"; };
 		18F9D40D235EE4D200CFA3DE /* YourDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +88,10 @@
 		18F9D40F235EE4D200CFA3DE /* YourDiary */ = {
 			isa = PBXGroup;
 			children = (
+				18B4BA332383E2DE0068ACD7 /* rili.png */,
+				183F6D002383E4F0006F2A19 /* liulan.png */,
+				18B4BA352383E3E30068ACD7 /* wode.png */,
+				18E19359237A970C00784D9C /* logo.jpg */,
 				185B014B237157E200AF5A98 /* myTabBarController.swift */,
 				18F9D410235EE4D200CFA3DE /* AppDelegate.swift */,
 				18F9D414235EE4D200CFA3DE /* Main.storyboard */,
@@ -135,6 +147,7 @@
 				TargetAttributes = {
 					18F9D40C235EE4D200CFA3DE = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -161,11 +174,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E1935A237A970D00784D9C /* logo.jpg in Resources */,
 				18C33AB52383D17C0011FE45 /* feeling.xib in Resources */,
 				18F9D41B235EE4D300CFA3DE /* LaunchScreen.storyboard in Resources */,
+				183F6D012383E4F0006F2A19 /* liulan.png in Resources */,
+				18B4BA362383E3E40068ACD7 /* wode.png in Resources */,
 				18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */,
 				F0C409D4238197E6006DB926 /* weather.xib in Resources */,
 				18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */,
+				18B4BA342383E2DE0068ACD7 /* rili.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YourDiary/Info.plist;
@@ -343,6 +361,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = scut.biao.YourDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YourDiary/Info.plist;

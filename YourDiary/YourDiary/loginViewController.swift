@@ -9,10 +9,18 @@
 import UIKit
 
 class loginViewController: UIViewController {
-
+    var userForEdit: user?
+    var userList: [user] = [user]()
+    
+    @IBOutlet weak var email: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBAction func userLogin(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
         // Do any additional setup after loading the view.
     }
     
