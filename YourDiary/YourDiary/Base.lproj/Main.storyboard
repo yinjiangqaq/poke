@@ -223,9 +223,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="nLh-5a-mOT" kind="show" id="wUu-AP-Hc5"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -236,7 +233,7 @@
                     <navigationItem key="navigationItem" id="awa-Sr-WFa">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nbS-Zl-0CF">
                             <connections>
-                                <segue destination="nLh-5a-mOT" kind="show" id="8C7-kv-4Th"/>
+                                <segue destination="56P-ae-vbL" kind="show" id="5sN-vK-KJn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -584,14 +581,13 @@
     <resources>
         <image name="liulan.png" width="16" height="16"/>
         <image name="logo.jpg" width="500" height="308"/>
-        <image name="pictureIcon" width="16" height="16"/>
+        <image name="pictureIcon" width="200" height="200"/>
         <image name="rili.png" width="16" height="16"/>
-        <image name="smileIcon" width="16" height="16"/>
-        <image name="weatherIcon" width="16" height="16"/>
+        <image name="smileIcon" width="200" height="200"/>
+        <image name="weatherIcon" width="200" height="200"/>
         <image name="wode.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pbQ-vU-TPS"/>
-        <segue reference="8C7-kv-4Th"/>
+        <segue reference="Kv2-Vq-GZy"/>
     </inferredMetricsTieBreakers>
 </document>
