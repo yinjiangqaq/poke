@@ -197,6 +197,15 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
 ///////////////////////////////
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "saveTheNote"){
+            
+        }else if(segue.identifier == "cancelTheNote"){
+            
+        }
+    }
+    
+    
     
     /*
     // MARK: - Navigation
