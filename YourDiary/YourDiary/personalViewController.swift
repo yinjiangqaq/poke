@@ -10,29 +10,26 @@ import UIKit
 
 class personalViewController: UIViewController {
 
-    @IBOutlet weak var my: UITableView!
+
+    @IBOutlet weak var image: UIButton!
+    @IBOutlet weak var sign: UILabel!
+    @IBOutlet weak var nickname: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     // MARK: - Table view data source
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 5
-    }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.my.dequeueReusableCell(withIdentifier: "cell1", for: indexPath as IndexPath)
-        return cell
-    }
+  
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation  */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
     }
-    */
+ 
 
 }
