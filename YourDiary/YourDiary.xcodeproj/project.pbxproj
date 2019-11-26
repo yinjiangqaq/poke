@@ -15,14 +15,17 @@
 		185B015823716CC700AF5A98 /* personalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015723716CC700AF5A98 /* personalViewController.swift */; };
 		185B015A23716CEB00AF5A98 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015923716CEB00AF5A98 /* historyViewController.swift */; };
 		185B015E23716DC700AF5A98 /* diaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015D23716DC700AF5A98 /* diaryEditViewController.swift */; };
-		185B016023716DFE00AF5A98 /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015F23716DFE00AF5A98 /* note.swift */; };
 		185B016223716E9F00AF5A98 /* personEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B016123716E9F00AF5A98 /* personEditViewController.swift */; };
 		185B0164237172B200AF5A98 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B0163237172B200AF5A98 /* user.swift */; };
 		18B4BA342383E2DE0068ACD7 /* rili.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B4BA332383E2DE0068ACD7 /* rili.png */; };
 		18B4BA362383E3E40068ACD7 /* wode.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B4BA352383E3E30068ACD7 /* wode.png */; };
-		18E1935A237A970D00784D9C /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E19359237A970C00784D9C /* logo.jpg */; };
 		18C33AB52383D17C0011FE45 /* feeling.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C33AB42383D17C0011FE45 /* feeling.xib */; };
 		18C33AB72383D1A10011FE45 /* feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C33AB62383D1A10011FE45 /* feeling.swift */; };
+		18E1935A237A970D00784D9C /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E19359237A970C00784D9C /* logo.jpg */; };
+		18E8916E238D21F400A9D06C /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8916D238D21F400A9D06C /* NoteTableViewCell.swift */; };
+		18E89170238D220500A9D06C /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8916F238D220400A9D06C /* NoteTableViewController.swift */; };
+		18E89172238D221300A9D06C /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E89171238D221300A9D06C /* note.swift */; };
+		18E89174238D222A00A9D06C /* NoteItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E89173238D222A00A9D06C /* NoteItemViewController.swift */; };
 		18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9D410235EE4D200CFA3DE /* AppDelegate.swift */; };
 		18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D414235EE4D200CFA3DE /* Main.storyboard */; };
 		18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D417235EE4D300CFA3DE /* Assets.xcassets */; };
@@ -40,14 +43,17 @@
 		185B015723716CC700AF5A98 /* personalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalViewController.swift; sourceTree = "<group>"; };
 		185B015923716CEB00AF5A98 /* historyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
 		185B015D23716DC700AF5A98 /* diaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diaryEditViewController.swift; sourceTree = "<group>"; };
-		185B015F23716DFE00AF5A98 /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
 		185B016123716E9F00AF5A98 /* personEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personEditViewController.swift; sourceTree = "<group>"; };
 		185B0163237172B200AF5A98 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		18B4BA332383E2DE0068ACD7 /* rili.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rili.png; path = ../../../rili.png; sourceTree = "<group>"; };
 		18B4BA352383E3E30068ACD7 /* wode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wode.png; path = ../../../wode.png; sourceTree = "<group>"; };
-		18E19359237A970C00784D9C /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = ../../../logo.jpg; sourceTree = "<group>"; };
 		18C33AB42383D17C0011FE45 /* feeling.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = feeling.xib; sourceTree = "<group>"; };
 		18C33AB62383D1A10011FE45 /* feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feeling.swift; sourceTree = "<group>"; };
+		18E19359237A970C00784D9C /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = ../../../logo.jpg; sourceTree = "<group>"; };
+		18E8916D238D21F400A9D06C /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		18E8916F238D220400A9D06C /* NoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
+		18E89171238D221300A9D06C /* note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = note.swift; path = "../../../../Downloads/poke-dev/YourDiary/YourDiary/note.swift"; sourceTree = "<group>"; };
+		18E89173238D222A00A9D06C /* NoteItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteItemViewController.swift; sourceTree = "<group>"; };
 		18F9D40D235EE4D200CFA3DE /* YourDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F9D410235EE4D200CFA3DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F9D415235EE4D200CFA3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +99,10 @@
 				18B4BA352383E3E30068ACD7 /* wode.png */,
 				18E19359237A970C00784D9C /* logo.jpg */,
 				185B014B237157E200AF5A98 /* myTabBarController.swift */,
+				18E8916F238D220400A9D06C /* NoteTableViewController.swift */,
+				18E89173238D222A00A9D06C /* NoteItemViewController.swift */,
+				18E89171238D221300A9D06C /* note.swift */,
+				18E8916D238D21F400A9D06C /* NoteTableViewCell.swift */,
 				18F9D410235EE4D200CFA3DE /* AppDelegate.swift */,
 				18F9D414235EE4D200CFA3DE /* Main.storyboard */,
 				18F9D417235EE4D300CFA3DE /* Assets.xcassets */,
@@ -103,7 +113,6 @@
 				185B015523716CB400AF5A98 /* calendarViewController.swift */,
 				185B015723716CC700AF5A98 /* personalViewController.swift */,
 				185B015923716CEB00AF5A98 /* historyViewController.swift */,
-				185B015F23716DFE00AF5A98 /* note.swift */,
 				185B016123716E9F00AF5A98 /* personEditViewController.swift */,
 				185B0163237172B200AF5A98 /* user.swift */,
 				185B015D23716DC700AF5A98 /* diaryEditViewController.swift */,
@@ -193,15 +202,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E89170238D220500A9D06C /* NoteTableViewController.swift in Sources */,
 				185B015223716C5600AF5A98 /* loginViewController.swift in Sources */,
-				185B016023716DFE00AF5A98 /* note.swift in Sources */,
 				185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */,
 				185B015423716C7600AF5A98 /* registerViewController.swift in Sources */,
 				18C33AB72383D1A10011FE45 /* feeling.swift in Sources */,
+				18E8916E238D21F400A9D06C /* NoteTableViewCell.swift in Sources */,
 				185B015623716CB400AF5A98 /* calendarViewController.swift in Sources */,
 				185B015E23716DC700AF5A98 /* diaryEditViewController.swift in Sources */,
 				185B015823716CC700AF5A98 /* personalViewController.swift in Sources */,
+				18E89174238D222A00A9D06C /* NoteItemViewController.swift in Sources */,
 				185B016223716E9F00AF5A98 /* personEditViewController.swift in Sources */,
+				18E89172238D221300A9D06C /* note.swift in Sources */,
 				185B0164237172B200AF5A98 /* user.swift in Sources */,
 				18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */,
 				F0C409D2238196CD006DB926 /* weather.swift in Sources */,
