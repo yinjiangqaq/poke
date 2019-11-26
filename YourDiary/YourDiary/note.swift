@@ -1,5 +1,5 @@
 //
-//  note.swift
+//  Note.swift
 //  YourDiary
 //
 //  Created by Apple on 2019/11/5.
@@ -8,36 +8,52 @@
 
 import Foundation
 import UIKit
-class note: NSObject, NSCoding{
+class Note: NSObject, NSCoding{
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(noteImage, forKey: "imageKey")
-        aCoder.encode(noteTitle, forKey: "titleKey")
+        aCoder.encode(year, forKey: "yearKey")
+        aCoder.encode(month, forKey: "monthKey")
+        aCoder.encode(day, forKey: "dayKey")
+        aCoder.encode(weekday, forKey: "weekdayKey")
         aCoder.encode(noteContent, forKey: "contentKey")
-        aCoder.encode(time, forKey: "timeKey")
+        aCoder.encode(noteImages, forKey: "imagesKey")
+        aCoder.encode(mood, forKey: "moodKey")
         aCoder.encode(weather, forKey: "weatherKey")
     }
     
     required init?(coder aDecoder: NSCoder) {
-        noteImage = aDecoder.decodeObject(forKey: "imageKey") as? UIImage
-        noteTitle = aDecoder.decodeObject(forKey: "titleKey") as? String
+        year = aDecoder.decodeObject(forKey: "yearKey") as? Int
+        month = aDecoder.decodeObject(forKey: "monthKey") as? Int
+        day = aDecoder.decodeObject(forKey: "dayKey") as? Int
+        weekday = aDecoder.decodeObject(forKey: "weekdayKey") as? String
         noteContent = aDecoder.decodeObject(forKey: "contentKey") as? String
-        
-        time = aDecoder.decodeObject(forKey: "timeKey") as? String
+        noteImages = aDecoder.decodeObject(forKey: "imagesKey") as? [UIImage]
+        mood = aDecoder.decodeObject(forKey: "moodKey") as? UIImage
         weather = aDecoder.decodeObject(forKey: "weatherKey") as? UIImage
+        
     }
-    var noteImage: UIImage?
-    var noteTitle: String?
-    var noteContent: String?
-    var time: String?
+    
+    var year: Int!
+    var month: Int!
+    var day: Int!
+    var weekday: String!
+    var noteContent: String!
+    var noteImages: [UIImage]?
+    var mood: UIImage?
     var weather: UIImage?
     
+    //发现项目的根目录
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-//    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("foodList")
-    init(noteImage: UIImage?, noteTitle: String?, noteContent: String?, time: String?, weather: UIImage) {
-        self.noteImage = noteImage
-        self.noteTitle = noteTitle
+    //在项目的根目录下创建子目录
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("noteList")
+    
+    init(year: Int?, month: Int?, day: Int?, weekday: String?,  noteContent: String?, noteImages: [UIImage]?, mood: UIImage?, weather: UIImage?) {
+        self.year = year
+        self.month = month
+        self.day = day
+        self.weekday = weekday
         self.noteContent = noteContent
-        self.time = time
+        self.noteImages = noteImages
+        self.mood = mood
         self.weather = weather
     }
 }

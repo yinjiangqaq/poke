@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B014B237157E200AF5A98 /* myTabBarController.swift */; };
-		185B0150237169A900AF5A98 /* 日历.png in Resources */ = {isa = PBXBuildFile; fileRef = 185B014F237169A900AF5A98 /* 日历.png */; };
 		185B015223716C5600AF5A98 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015123716C5600AF5A98 /* loginViewController.swift */; };
 		185B015423716C7600AF5A98 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015323716C7600AF5A98 /* registerViewController.swift */; };
 		185B015623716CB400AF5A98 /* calendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015523716CB400AF5A98 /* calendarViewController.swift */; };
@@ -16,18 +15,23 @@
 		185B015A23716CEB00AF5A98 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015923716CEB00AF5A98 /* historyViewController.swift */; };
 		185B015C23716DB000AF5A98 /* weatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015B23716DB000AF5A98 /* weatherViewController.swift */; };
 		185B015E23716DC700AF5A98 /* diaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015D23716DC700AF5A98 /* diaryEditViewController.swift */; };
-		185B016023716DFE00AF5A98 /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015F23716DFE00AF5A98 /* note.swift */; };
+		185B016023716DFE00AF5A98 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015F23716DFE00AF5A98 /* Note.swift */; };
 		185B016223716E9F00AF5A98 /* personEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B016123716E9F00AF5A98 /* personEditViewController.swift */; };
 		185B0164237172B200AF5A98 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B0163237172B200AF5A98 /* user.swift */; };
 		18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9D410235EE4D200CFA3DE /* AppDelegate.swift */; };
 		18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D414235EE4D200CFA3DE /* Main.storyboard */; };
 		18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D417235EE4D300CFA3DE /* Assets.xcassets */; };
 		18F9D41B235EE4D300CFA3DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D419235EE4D300CFA3DE /* LaunchScreen.storyboard */; };
+		89076E1F238BB73500000472 /* save.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89076E1E238BB73400000472 /* save.jpg */; };
+		8917FCE523866076001A07DA /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917FCE423866076001A07DA /* NoteTableViewController.swift */; };
+		8917FCE723866A0A001A07DA /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917FCE623866A0A001A07DA /* NoteTableViewCell.swift */; };
+		8972CBF82388D5E000F142F7 /* edit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8972CBF72388D5E000F142F7 /* edit.jpg */; };
+		8972CBFA2388D60000F142F7 /* delete.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8972CBF92388D60000F142F7 /* delete.jpg */; };
+		89F0A7C92386DDE600A6D761 /* NoteItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F0A7C82386DDE600A6D761 /* NoteItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		185B014B237157E200AF5A98 /* myTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabBarController.swift; sourceTree = "<group>"; };
-		185B014F237169A900AF5A98 /* 日历.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "日历.png"; path = "../../../easyicon_201911050425378740/日历.png"; sourceTree = "<group>"; };
 		185B015123716C5600AF5A98 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		185B015323716C7600AF5A98 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		185B015523716CB400AF5A98 /* calendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +39,7 @@
 		185B015923716CEB00AF5A98 /* historyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
 		185B015B23716DB000AF5A98 /* weatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherViewController.swift; sourceTree = "<group>"; };
 		185B015D23716DC700AF5A98 /* diaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diaryEditViewController.swift; sourceTree = "<group>"; };
-		185B015F23716DFE00AF5A98 /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
+		185B015F23716DFE00AF5A98 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		185B016123716E9F00AF5A98 /* personEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personEditViewController.swift; sourceTree = "<group>"; };
 		185B0163237172B200AF5A98 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		18F9D40D235EE4D200CFA3DE /* YourDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +48,12 @@
 		18F9D417235EE4D300CFA3DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F9D41A235EE4D300CFA3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F9D41C235EE4D300CFA3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89076E1E238BB73400000472 /* save.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = save.jpg; sourceTree = "<group>"; };
+		8917FCE423866076001A07DA /* NoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
+		8917FCE623866A0A001A07DA /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		8972CBF72388D5E000F142F7 /* edit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = edit.jpg; sourceTree = "<group>"; };
+		8972CBF92388D60000F142F7 /* delete.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = delete.jpg; sourceTree = "<group>"; };
+		89F0A7C82386DDE600A6D761 /* NoteItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +86,13 @@
 		18F9D40F235EE4D200CFA3DE /* YourDiary */ = {
 			isa = PBXGroup;
 			children = (
-				185B014F237169A900AF5A98 /* 日历.png */,
+				89076E1E238BB73400000472 /* save.jpg */,
+				8972CBF72388D5E000F142F7 /* edit.jpg */,
+				8972CBF92388D60000F142F7 /* delete.jpg */,
+				8917FCE623866A0A001A07DA /* NoteTableViewCell.swift */,
+				8917FCE423866076001A07DA /* NoteTableViewController.swift */,
+				89F0A7C82386DDE600A6D761 /* NoteItemViewController.swift */,
+				185B015F23716DFE00AF5A98 /* Note.swift */,
 				185B014B237157E200AF5A98 /* myTabBarController.swift */,
 				18F9D410235EE4D200CFA3DE /* AppDelegate.swift */,
 				18F9D414235EE4D200CFA3DE /* Main.storyboard */,
@@ -90,7 +106,6 @@
 				185B015923716CEB00AF5A98 /* historyViewController.swift */,
 				185B015B23716DB000AF5A98 /* weatherViewController.swift */,
 				185B015D23716DC700AF5A98 /* diaryEditViewController.swift */,
-				185B015F23716DFE00AF5A98 /* note.swift */,
 				185B016123716E9F00AF5A98 /* personEditViewController.swift */,
 				185B0163237172B200AF5A98 /* user.swift */,
 			);
@@ -155,9 +170,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185B0150237169A900AF5A98 /* 日历.png in Resources */,
 				18F9D41B235EE4D300CFA3DE /* LaunchScreen.storyboard in Resources */,
+				8972CBF82388D5E000F142F7 /* edit.jpg in Resources */,
 				18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */,
+				8972CBFA2388D60000F142F7 /* delete.jpg in Resources */,
+				89076E1F238BB73500000472 /* save.jpg in Resources */,
 				18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,10 +187,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				185B015223716C5600AF5A98 /* loginViewController.swift in Sources */,
-				185B016023716DFE00AF5A98 /* note.swift in Sources */,
+				185B016023716DFE00AF5A98 /* Note.swift in Sources */,
 				185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */,
 				185B015423716C7600AF5A98 /* registerViewController.swift in Sources */,
 				185B015623716CB400AF5A98 /* calendarViewController.swift in Sources */,
+				89F0A7C92386DDE600A6D761 /* NoteItemViewController.swift in Sources */,
+				8917FCE723866A0A001A07DA /* NoteTableViewCell.swift in Sources */,
+				8917FCE523866076001A07DA /* NoteTableViewController.swift in Sources */,
 				185B015E23716DC700AF5A98 /* diaryEditViewController.swift in Sources */,
 				185B015823716CC700AF5A98 /* personalViewController.swift in Sources */,
 				185B016223716E9F00AF5A98 /* personEditViewController.swift in Sources */,
@@ -329,13 +349,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SH4442A2HH;
 				INFOPLIST_FILE = YourDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = scut.biao.YourDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -347,13 +368,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SH4442A2HH;
 				INFOPLIST_FILE = YourDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = scut.biao.YourDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
