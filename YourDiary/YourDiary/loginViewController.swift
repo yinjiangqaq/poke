@@ -9,7 +9,8 @@
 import UIKit
 
 class loginViewController: UIViewController {
-
+    var userForEdit: user?
+    var userList: [user] = [user]()
     
     @IBOutlet weak var email: UITextField!
     
@@ -19,7 +20,7 @@ class loginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
         // Do any additional setup after loading the view.
     }
     

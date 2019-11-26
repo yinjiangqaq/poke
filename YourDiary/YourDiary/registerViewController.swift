@@ -37,7 +37,10 @@ class registerViewController: UIViewController {
 //        userForEdit?.userInfo = nil
 //        userForEdit?.userName = nil
 //        userForEdit?.userSex = nil
+      
         userList.append(user(userName: nil, userSex: nil, userEmail:  userForEdit?.userEmail, userPassword: userForEdit?.userPassword, portrait: nil, userInfo: nil, userAge: nil))
+        saveUserFile()
+        print(userList.count)
     }
     
     
