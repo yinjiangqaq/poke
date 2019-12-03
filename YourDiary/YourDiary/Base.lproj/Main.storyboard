@@ -526,7 +526,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="userLogin:" destination="fHA-kp-n78" eventType="touchUpInside" id="tGk-dA-1GQ"/>
-                                    <segue destination="6fR-wx-p9j" kind="show" id="pbQ-vU-TPS"/>
+                                    <segue destination="6fR-wx-p9j" kind="show" identifier="loginToIndex" id="pbQ-vU-TPS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EU-Zd-1Jj">
@@ -540,7 +540,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="2YZ-w2-UNi" kind="show" id="1je-Sn-Ioo"/>
+                                    <segue destination="2YZ-w2-UNi" kind="show" identifier="toRegister" id="1je-Sn-Ioo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVq-DM-c7r">
@@ -729,7 +729,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="userRegister:" destination="2YZ-w2-UNi" eventType="touchUpInside" id="b2U-TB-yPI"/>
-                                    <segue destination="6fR-wx-p9j" kind="show" id="Kv2-Vq-GZy"/>
+                                    <segue destination="6fR-wx-p9j" kind="show" identifier="registerToIndex" id="Kv2-Vq-GZy"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="uKV-tW-B1E">
@@ -986,7 +986,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Kv2-Vq-GZy"/>
-        <segue reference="htK-dI-SjS"/>
+        <segue reference="1je-Sn-Ioo"/>
         <segue reference="q4T-X3-htT"/>
     </inferredMetricsTieBreakers>
 </document>

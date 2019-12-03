@@ -67,15 +67,39 @@ class registerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
+    func showAlert(mes: String) {
+        
+        let alertController = UIAlertController(title: "提示！",message: mes, preferredStyle: .alert)
+        
+        //显示提示框
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        //两秒钟后自动消失
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            
+            self.presentedViewController?.dismiss(animated: false, completion: nil)
+            
+        }
+        
+        
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "registerToIndex")
+        {
+            if(email.text == "" || password.text == "")
+            {
+                showAlert(mes: "未输入邮箱号或验证码或密码")
+            }
+        }
     }
-    */
+    
 
 }
