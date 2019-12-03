@@ -30,17 +30,7 @@ class registerViewController: UIViewController {
     //用户点击注册按钮
     @IBAction func userRegister(_ sender: Any) {
       
-        userForEdit?.userEmail = self.email.text
-        userForEdit?.userPassword = self.password.text
-//        userForEdit?.portrait = nil
-//        userForEdit?.userAge = nil
-//        userForEdit?.userInfo = nil
-//        userForEdit?.userName = nil
-//        userForEdit?.userSex = nil
-      
-        userList.append(user(userName: nil, userSex: nil, userEmail:  userForEdit?.userEmail, userPassword: userForEdit?.userPassword, portrait: nil, userInfo: nil, userAge: nil))
-        saveUserFile()
-        print(userList.count)
+        
     }
     
     
@@ -97,7 +87,22 @@ class registerViewController: UIViewController {
             if(email.text == "" || password.text == "")
             {
                 showAlert(mes: "未输入邮箱号或验证码护理密码")
+            }else{
+                userForEdit?.userEmail = self.email.text
+                userForEdit?.userPassword = self.password.text
+                //        userForEdit?.portrait = nil
+                //        userForEdit?.userAge = nil
+                //        userForEdit?.userInfo = nil
+                //        userForEdit?.userName = nil
+                //        userForEdit?.userSex = nil
+                
+                userList.append(user(userName: nil, userSex: nil, userEmail:  userForEdit?.userEmail, userPassword: userForEdit?.userPassword, portrait: nil, userInfo: nil, userAge: nil))
+                
+                saveUserFile()
+               
             }
+            
+            
         }
     }
     

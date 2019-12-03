@@ -20,9 +20,22 @@ class loginViewController: UIViewController {
         
         
     }
+    
+    
+    func loadUserFile() -> [user]? {
+        return (NSKeyedUnarchiver.unarchiveObject(withFile: user.ArchiveURL.path) as? [user])
+    }
+    func initUserList()
+    {
+        var userList: [user]? = loadUserFile()
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        initUserList()
+        print(userList.count)
         // Do any additional setup after loading the view.
     }
     
@@ -52,13 +65,17 @@ class loginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "loginToIndex"){
-        
+
             if (email.text == "" || password.text == "")
             {
+                print(userList.count)
                 print("未输入邮箱或密码")
                 showAlert(mes: "未输入邮箱或密码")
             }
+
+
     }
+        
     }
 
 }
