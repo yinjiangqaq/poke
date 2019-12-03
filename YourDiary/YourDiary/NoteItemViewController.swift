@@ -12,11 +12,11 @@ class NoteItemViewController: UIViewController {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var dayOfWeek: UILabel!
-    @IBOutlet weak var content: UITextView!
+    @IBOutlet weak var content: UILabel!
     var images = [UIImage]()
     @IBOutlet weak var contentPic: UIScrollView!
     var noteForEdit:Note!
-    @IBOutlet weak var textContent: UITextView!
+
     
     
     override func viewDidLoad() {
@@ -44,6 +44,7 @@ class NoteItemViewController: UIViewController {
     
     // MARK: - Navigation	
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //页面跳转前的数据准备
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
@@ -54,6 +55,15 @@ class NoteItemViewController: UIViewController {
         }
         if segue.identifier == "cancelToList"{
             print("cancel")
+        }
+        //如果跳转标识符是editDiary，则将当前cell的对应数据传给目标页面
+        if segue.identifier == "editDiary"{
+            print("edit diary")
+            noteForEdit.noteContent = self.content.text
+            noteForEdit.noteImages = images
+            let editVC = segue.destination as! diaryEditViewController
+            
+            
         }
     }
     

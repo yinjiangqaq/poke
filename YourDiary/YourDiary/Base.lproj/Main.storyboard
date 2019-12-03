@@ -266,8 +266,16 @@
                         <viewLayoutGuide key="safeArea" id="ZfK-D6-r7G"/>
                     </view>
                     <navigationItem key="navigationItem" title="DiaryEdit" id="mfK-SL-S86">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cwa-vy-pXk"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LCM-al-tmv"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cwa-vy-pXk">
+                            <connections>
+                                <segue destination="8ER-hc-ekc" kind="unwind" unwindAction="cancelToListWithSegue:" id="YTq-f2-ezp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LCM-al-tmv">
+                            <connections>
+                                <segue destination="8ER-hc-ekc" kind="unwind" unwindAction="saveToListWithSegue:" id="pGn-dP-7DN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="AddFeeling" destination="e09-iJ-giZ" id="tYp-Wy-4VS"/>
@@ -280,10 +288,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zel-I0-tNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8ER-hc-ekc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5632" y="161"/>
+            <point key="canvasLocation" x="6743" y="161"/>
         </scene>
-        <!--Note Item View Controller-->
+        <!--Title-->
         <scene sceneID="Rto-3F-zb4">
             <objects>
                 <viewController id="rkP-Au-hjq" customClass="NoteItemViewController" customModule="YourDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -320,94 +329,54 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="vsc-Yb-UYU"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGp-x0-ECJ">
-                                <rect key="frame" x="0.0" y="756" width="414" height="57"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxE-1Q-v3Q">
-                                        <rect key="frame" x="110" y="5" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="KX8-73-ekY"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="XzS-6S-baM"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="oIh-ep-rx6"/>
-                                            <constraint firstAttribute="width" constant="40" id="v8d-Vl-nPb"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="save"/>
-                                        <connections>
-                                            <segue destination="nE1-YB-ETR" kind="unwind" unwindAction="saveToListWithSegue:" id="RRR-6y-kys"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrL-qL-9IH">
-                                        <rect key="frame" x="264" y="5" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="0sh-Za-e20"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="3rZ-jx-3e2"/>
-                                            <constraint firstAttribute="width" constant="40" id="iQp-tz-rxX"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="oLi-1x-fM4"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="edit"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.43641999009999999" green="0.67260033060000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="1mX-3p-bau"/>
-                                    <constraint firstItem="bxE-1Q-v3Q" firstAttribute="leading" secondItem="QGp-x0-ECJ" secondAttribute="leading" constant="110" id="5Jj-KU-khB"/>
-                                    <constraint firstItem="bxE-1Q-v3Q" firstAttribute="top" secondItem="QGp-x0-ECJ" secondAttribute="top" constant="5" id="Egv-Jx-7IS"/>
-                                    <constraint firstAttribute="trailing" secondItem="SrL-qL-9IH" secondAttribute="trailing" constant="110" id="TOa-Vc-TpG"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="hw0-gh-GbB"/>
-                                    <constraint firstItem="SrL-qL-9IH" firstAttribute="top" secondItem="QGp-x0-ECJ" secondAttribute="top" constant="5" id="rFE-nB-f42"/>
-                                    <constraint firstAttribute="width" constant="414" id="wFe-p3-Hlr"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="57" id="wdT-k6-Sbc"/>
-                                </constraints>
-                            </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enA-e4-K9h">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enA-e4-K9h">
                                 <rect key="frame" x="0.0" y="248" width="414" height="501"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R4Z-C5-UmI">
-                                        <rect key="frame" x="0.0" y="-3.5" width="414" height="508"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPt-Ax-3zH">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="279"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="508" id="Ee9-Bs-yho"/>
-                                            <constraint firstAttribute="width" constant="414" id="eNp-k8-Zi7"/>
+                                            <constraint firstAttribute="width" constant="404" id="Z8D-9z-iGt"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="501" id="2Mc-0x-1xS"/>
-                                    <constraint firstAttribute="trailing" secondItem="R4Z-C5-UmI" secondAttribute="trailing" id="2gP-VC-TEl"/>
-                                    <constraint firstItem="R4Z-C5-UmI" firstAttribute="centerY" secondItem="enA-e4-K9h" secondAttribute="centerY" id="MR7-wU-E4Q"/>
-                                    <constraint firstItem="R4Z-C5-UmI" firstAttribute="leading" secondItem="enA-e4-K9h" secondAttribute="leading" id="U1a-j4-I9E"/>
-                                    <constraint firstAttribute="bottom" secondItem="R4Z-C5-UmI" secondAttribute="bottom" constant="-3" id="Xfc-ID-wx8"/>
                                     <constraint firstAttribute="width" constant="414" id="byX-UN-vA6"/>
+                                    <constraint firstItem="RPt-Ax-3zH" firstAttribute="top" secondItem="enA-e4-K9h" secondAttribute="top" id="iCK-C8-BKT"/>
+                                    <constraint firstItem="RPt-Ax-3zH" firstAttribute="leading" secondItem="enA-e4-K9h" secondAttribute="leading" id="qaA-vY-UWK"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="enA-e4-K9h" firstAttribute="top" secondItem="zvF-Ap-bXE" secondAttribute="bottom" id="3PJ-pi-lmf"/>
-                            <constraint firstItem="QGp-x0-ECJ" firstAttribute="leading" secondItem="lHX-jr-MHn" secondAttribute="leading" id="Vxh-1w-IGo"/>
                             <constraint firstItem="zvF-Ap-bXE" firstAttribute="top" secondItem="lHX-jr-MHn" secondAttribute="top" id="hqE-Ln-gAB"/>
                             <constraint firstItem="zvF-Ap-bXE" firstAttribute="leading" secondItem="lHX-jr-MHn" secondAttribute="leading" id="sw1-2Q-NIq"/>
                             <constraint firstItem="enA-e4-K9h" firstAttribute="leading" secondItem="lHX-jr-MHn" secondAttribute="leading" id="xjX-oh-UMy"/>
-                            <constraint firstItem="lHX-jr-MHn" firstAttribute="bottom" secondItem="QGp-x0-ECJ" secondAttribute="bottom" id="zQs-iJ-SnG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lHX-jr-MHn"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="lgY-iL-REe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="cLQ-uj-l0r">
+                            <connections>
+                                <segue destination="56P-ae-vbL" kind="show" identifier="editDiary" id="CpG-la-KGy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="content" destination="R4Z-C5-UmI" id="6Oh-57-cgR"/>
                         <outlet property="contentPic" destination="enA-e4-K9h" id="zxn-8i-d68"/>
+                        <outlet property="context" destination="RPt-Ax-3zH" id="h1N-qX-ors"/>
                         <outlet property="date" destination="pYy-go-VwW" id="U1z-Y3-Ro0"/>
                         <outlet property="day" destination="Tht-9l-wTV" id="Q50-66-TTO"/>
                         <outlet property="dayOfWeek" destination="Ive-sS-87s" id="wBR-EU-6XL"/>
-                        <outlet property="textContent" destination="R4Z-C5-UmI" id="Q4q-IH-d3N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZ2-9l-soX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="nE1-YB-ETR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4525" y="161"/>
+            <point key="canvasLocation" x="4524.6376811594209" y="160.71428571428569"/>
         </scene>
         <!--weather-->
         <scene sceneID="WEY-qJ-xE7">
@@ -949,7 +918,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAX-rG-RJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5633" y="-628"/>
+            <point key="canvasLocation" x="5581" y="161"/>
         </scene>
         <!--我的-->
         <scene sceneID="5ef-F5-RKt">
@@ -973,12 +942,10 @@
     </scenes>
     <resources>
         <image name="0F6FF4D4-1A93-4CD0-93AC-B47EDFEC7799.png" width="16" height="16"/>
-        <image name="edit" width="500" height="484"/>
         <image name="liulan.png" width="16" height="16"/>
         <image name="logo.jpg" width="500" height="308"/>
         <image name="pictureIcon" width="200" height="200"/>
         <image name="rili.png" width="16" height="16"/>
-        <image name="save" width="500" height="500"/>
         <image name="smileIcon" width="200" height="200"/>
         <image name="weatherIcon" width="200" height="200"/>
         <image name="wode.png" width="16" height="16"/>
