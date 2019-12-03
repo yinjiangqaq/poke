@@ -102,7 +102,7 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DiaryTitle.becomeFirstResponder()
+        DiaryContent.becomeFirstResponder()
         
 //        centerY = DiaryContent.center.y
 //

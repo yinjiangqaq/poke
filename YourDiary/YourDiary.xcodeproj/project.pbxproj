@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		099F22EA26C8A8AD90247434 /* Pods_YourDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA3AFC14B5D9F6C50D985B5 /* Pods_YourDiary.framework */; };
 		185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B014B237157E200AF5A98 /* myTabBarController.swift */; };
 		185B015223716C5600AF5A98 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015123716C5600AF5A98 /* loginViewController.swift */; };
 		185B015423716C7600AF5A98 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015323716C7600AF5A98 /* registerViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B7B1B8DDADDD3380399F2C4 /* Pods-YourDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourDiary.debug.xcconfig"; path = "Target Support Files/Pods-YourDiary/Pods-YourDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		185B014B237157E200AF5A98 /* myTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabBarController.swift; sourceTree = "<group>"; };
 		185B015123716C5600AF5A98 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		185B015323716C7600AF5A98 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,9 @@
 		18F9D417235EE4D300CFA3DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F9D41A235EE4D300CFA3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F9D41C235EE4D300CFA3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA3AFC14B5D9F6C50D985B5 /* Pods_YourDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CB800061A3C5EF93EA23C92 /* Pods-YourDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourDiary.release.xcconfig"; path = "Target Support Files/Pods-YourDiary/Pods-YourDiary.release.xcconfig"; sourceTree = "<group>"; };
+		F014EE4B2396860300A3A479 /* FSCalendar-bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-bridging-Header.h"; sourceTree = "<group>"; };
 		F0C409D1238196CD006DB926 /* weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather.swift; sourceTree = "<group>"; };
 		F0C409D3238197E6006DB926 /* weather.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = weather.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099F22EA26C8A8AD90247434 /* Pods_YourDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +78,8 @@
 			children = (
 				18F9D40F235EE4D200CFA3DE /* YourDiary */,
 				18F9D40E235EE4D200CFA3DE /* Products */,
+				203E5D154C447FFF5E191B15 /* Pods */,
+				2FBEB336D3C21B1C41E283F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +94,7 @@
 		18F9D40F235EE4D200CFA3DE /* YourDiary */ = {
 			isa = PBXGroup;
 			children = (
+				F014EE4B2396860300A3A479 /* FSCalendar-bridging-Header.h */,
 				18C49680239638A300598502 /* note.swift */,
 				185B014B237157E200AF5A98 /* myTabBarController.swift */,
 				18E8916F238D220400A9D06C /* NoteTableViewController.swift */,
@@ -112,6 +121,23 @@
 			path = YourDiary;
 			sourceTree = "<group>";
 		};
+		203E5D154C447FFF5E191B15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B7B1B8DDADDD3380399F2C4 /* Pods-YourDiary.debug.xcconfig */,
+				6CB800061A3C5EF93EA23C92 /* Pods-YourDiary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2FBEB336D3C21B1C41E283F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AA3AFC14B5D9F6C50D985B5 /* Pods_YourDiary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18F9D41F235EE4D300CFA3DE /* Build configuration list for PBXNativeTarget "YourDiary" */;
 			buildPhases = (
+				5EC0FEA43799B04AF5D89CC1 /* [CP] Check Pods Manifest.lock */,
 				18F9D409235EE4D200CFA3DE /* Sources */,
 				18F9D40A235EE4D200CFA3DE /* Frameworks */,
 				18F9D40B235EE4D200CFA3DE /* Resources */,
+				9EA56230796287A75B805FCB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +208,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EC0FEA43799B04AF5D89CC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YourDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EA56230796287A75B805FCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourDiary/Pods-YourDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourDiary/Pods-YourDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourDiary/Pods-YourDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18F9D409235EE4D200CFA3DE /* Sources */ = {
@@ -345,6 +415,7 @@
 		};
 		18F9D420235EE4D300CFA3DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B7B1B8DDADDD3380399F2C4 /* Pods-YourDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -357,6 +428,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = scut.biao.YourDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/turtlejermine/Desktop/poke/YourDiary/YourDiary/FSCalendar-bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -365,6 +437,7 @@
 		};
 		18F9D421235EE4D300CFA3DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB800061A3C5EF93EA23C92 /* Pods-YourDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -377,6 +450,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = scut.biao.YourDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/turtlejermine/Desktop/poke/YourDiary/YourDiary/FSCalendar-bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
