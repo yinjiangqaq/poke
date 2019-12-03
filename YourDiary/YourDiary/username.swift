@@ -7,24 +7,29 @@
 //
 
 import Foundation
+import UIKit
 
-class user: NSObject, NSCoding {
+class username: NSObject, NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(userName, forKey: "nameKey")
-        aCoder.encode(userSex, forKey: "sexKey")
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         userName = aDecoder.decodeObject(forKey: "nameKey") as? String
-        userSex = aDecoder.decodeObject(forKey: "sexKey") as? String
+     
     }
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     var userName: String?
-    var userSex: String?
-    
-    init( userName: String?, userSex: String?) {
+
+
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+
+
+
+
+    init( userName: String?) {
         
         self.userName = userName
-        self.userSex = userSex
+  
     }
 }

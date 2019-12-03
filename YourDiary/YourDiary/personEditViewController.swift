@@ -8,23 +8,61 @@
 
 import UIKit
 
-class personEditViewController: UIViewController {
+class personEditViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
 
+ 
+
+    @IBOutlet weak var touxiang: UIImageView!
+    @IBOutlet weak var NICKNAME: UILabel!
+    @IBOutlet weak var SIGN: UILabel!
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+   
     }
     
-
+    @IBAction func cancelToList (segue: UIStoryboardSegue){
+        
+    }
+    @IBAction func saveToList1 (segue: UIStoryboardSegue){
+        if let addUserVC = segue.source as? extensionViewController{
+            if let addUser = addUserVC.userforedit{
+                NICKNAME.text = addUser.userName
+            
+            }
+        }
+    }
+    @IBAction func saveToList2 (segue: UIStoryboardSegue){
+        if let addUserVC = segue.source as? extension2ViewController{
+            if let addUser = addUserVC.userforedit2{
+                SIGN.text = addUser.userSign
+                
+            }
+        }
+    }
+    @IBAction func tapphoto(_ sender: Any) {
+       print("success")
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self 
+        present(imagePicker,animated: true,completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        self.touxiang.image = selectedImage
+        
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  */
+
+ 
 
 }

@@ -16,10 +16,11 @@
 		185B015E23716DC700AF5A98 /* diaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015D23716DC700AF5A98 /* diaryEditViewController.swift */; };
 		185B016023716DFE00AF5A98 /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015F23716DFE00AF5A98 /* note.swift */; };
 		185B016223716E9F00AF5A98 /* personEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B016123716E9F00AF5A98 /* personEditViewController.swift */; };
-		185B0164237172B200AF5A98 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B0163237172B200AF5A98 /* user.swift */; };
+		185B0164237172B200AF5A98 /* username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B0163237172B200AF5A98 /* username.swift */; };
 		189E3FFD238D02640077E2C2 /* 超级截屏_20191126_144515_mh1574750824695.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189E3FFC238D02640077E2C2 /* 超级截屏_20191126_144515_mh1574750824695.jpg */; };
 		189E3FFF238D07790077E2C2 /* extensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E3FFE238D07790077E2C2 /* extensionViewController.swift */; };
-		18A279EE2383DCF000249DAD /* personalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A279ED2383DCF000249DAD /* personalViewController.swift */; };
+		18AB5B702396536700CB8FE7 /* usersign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB5B6F2396536700CB8FE7 /* usersign.swift */; };
+		18AB5B722396561F00CB8FE7 /* extension2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB5B712396561F00CB8FE7 /* extension2ViewController.swift */; };
 		18C8EE842383BFCC00341055 /* 0F6FF4D4-1A93-4CD0-93AC-B47EDFEC7799.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8EE832383BFCC00341055 /* 0F6FF4D4-1A93-4CD0-93AC-B47EDFEC7799.png */; };
 		18F91959237A8857008134B0 /* forgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F91958237A8857008134B0 /* forgetViewController.swift */; };
 		18F9195D237AA2B3008134B0 /* 69CD8AB33476B281929F7B291952D13F.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9195C237AA2B3008134B0 /* 69CD8AB33476B281929F7B291952D13F.png */; };
@@ -40,10 +41,11 @@
 		185B015D23716DC700AF5A98 /* diaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diaryEditViewController.swift; sourceTree = "<group>"; };
 		185B015F23716DFE00AF5A98 /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
 		185B016123716E9F00AF5A98 /* personEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personEditViewController.swift; sourceTree = "<group>"; };
-		185B0163237172B200AF5A98 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		185B0163237172B200AF5A98 /* username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = username.swift; sourceTree = "<group>"; };
 		189E3FFC238D02640077E2C2 /* 超级截屏_20191126_144515_mh1574750824695.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "超级截屏_20191126_144515_mh1574750824695.jpg"; path = "../../../超级截屏_20191126_144515_mh1574750824695.jpg"; sourceTree = "<group>"; };
 		189E3FFE238D07790077E2C2 /* extensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionViewController.swift; sourceTree = "<group>"; };
-		18A279ED2383DCF000249DAD /* personalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personalViewController.swift; sourceTree = "<group>"; };
+		18AB5B6F2396536700CB8FE7 /* usersign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersign.swift; sourceTree = "<group>"; };
+		18AB5B712396561F00CB8FE7 /* extension2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension2ViewController.swift; sourceTree = "<group>"; };
 		18C8EE832383BFCC00341055 /* 0F6FF4D4-1A93-4CD0-93AC-B47EDFEC7799.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "0F6FF4D4-1A93-4CD0-93AC-B47EDFEC7799.png"; path = "../../../0F6FF4D4-1A93-4CD0-93AC-B47EDFEC7799.png"; sourceTree = "<group>"; };
 		18F91958237A8857008134B0 /* forgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetViewController.swift; sourceTree = "<group>"; };
 		18F9195C237AA2B3008134B0 /* 69CD8AB33476B281929F7B291952D13F.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 69CD8AB33476B281929F7B291952D13F.png; path = ../../../69CD8AB33476B281929F7B291952D13F.png; sourceTree = "<group>"; };
@@ -86,11 +88,11 @@
 		18F9D40F235EE4D200CFA3DE /* YourDiary */ = {
 			isa = PBXGroup;
 			children = (
-				18A279ED2383DCF000249DAD /* personalViewController.swift */,
 				18F9195C237AA2B3008134B0 /* 69CD8AB33476B281929F7B291952D13F.png */,
 				185B014B237157E200AF5A98 /* myTabBarController.swift */,
 				18F9D410235EE4D200CFA3DE /* AppDelegate.swift */,
 				18F9D414235EE4D200CFA3DE /* Main.storyboard */,
+				18AB5B712396561F00CB8FE7 /* extension2ViewController.swift */,
 				189E3FFE238D07790077E2C2 /* extensionViewController.swift */,
 				189E3FFC238D02640077E2C2 /* 超级截屏_20191126_144515_mh1574750824695.jpg */,
 				18C8EE832383BFCC00341055 /* 0F6FF4D4-1A93-4CD0-93AC-B47EDFEC7799.png */,
@@ -107,7 +109,8 @@
 				185B015D23716DC700AF5A98 /* diaryEditViewController.swift */,
 				185B015F23716DFE00AF5A98 /* note.swift */,
 				185B016123716E9F00AF5A98 /* personEditViewController.swift */,
-				185B0163237172B200AF5A98 /* user.swift */,
+				185B0163237172B200AF5A98 /* username.swift */,
+				18AB5B6F2396536700CB8FE7 /* usersign.swift */,
 			);
 			path = YourDiary;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185B015223716C5600AF5A98 /* loginViewController.swift in Sources */,
+				18AB5B702396536700CB8FE7 /* usersign.swift in Sources */,
 				185B016023716DFE00AF5A98 /* note.swift in Sources */,
 				189E3FFF238D07790077E2C2 /* extensionViewController.swift in Sources */,
 				185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */,
@@ -196,9 +200,9 @@
 				185B015623716CB400AF5A98 /* calendarViewController.swift in Sources */,
 				185B015E23716DC700AF5A98 /* diaryEditViewController.swift in Sources */,
 				185B016223716E9F00AF5A98 /* personEditViewController.swift in Sources */,
-				18A279EE2383DCF000249DAD /* personalViewController.swift in Sources */,
-				185B0164237172B200AF5A98 /* user.swift in Sources */,
+				185B0164237172B200AF5A98 /* username.swift in Sources */,
 				185B015C23716DB000AF5A98 /* weatherViewController.swift in Sources */,
+				18AB5B722396561F00CB8FE7 /* extension2ViewController.swift in Sources */,
 				18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */,
 				185B015A23716CEB00AF5A98 /* historyViewController.swift in Sources */,
 			);
