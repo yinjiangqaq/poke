@@ -6,3 +6,4 @@
 4. 2019.10.22
 增加ios大作业项目
 5. 2019.12.3 增加第三方日历组件，点击日历打印日期，日历可左右滑动（注：打开项目不再是从YourDiary.xcodeproj文件进入，而是YourDiary.xcworkspace进入）
+6. 2019.12.4 自定义noteListTableViewCell，完成日历页面的tableview，插入背景图片（暂时由别的图片代替），数据为原始数据
