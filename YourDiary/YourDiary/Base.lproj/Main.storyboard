@@ -397,20 +397,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7up-Pz-zmg" customClass="FSCalendar">
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7up-Pz-zmg" customClass="FSCalendar">
                                 <rect key="frame" x="0.0" y="44" width="414" height="346"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="headerMinimumDissolvedAlpha">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="AJS-wC-mea" id="SE8-1Q-Bln"/>
                                     <outlet property="delegate" destination="AJS-wC-mea" id="bdF-rA-8kw"/>
                                 </connections>
                             </view>
+                            <tableView clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0qq-Cb-uVH">
+                                <rect key="frame" x="0.0" y="398" width="414" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AJS-wC-mea" id="Vch-ka-7lE"/>
+                                    <outlet property="delegate" destination="AJS-wC-mea" id="v0h-UR-h3T"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dsh-mw-6SK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="日历" image="rili.png" selectedImage="rili.png" id="GfD-0L-KSv"/>
+                    <connections>
+                        <outlet property="noteListTableView" destination="0qq-Cb-uVH" id="abp-id-Y8y"/>
+                        <outlet property="topView" destination="GCB-J9-N5f" id="RgF-mJ-jFn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHM-5E-2bC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

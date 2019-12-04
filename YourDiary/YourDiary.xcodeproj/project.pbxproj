@@ -27,6 +27,8 @@
 		18F9D416235EE4D200CFA3DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D414235EE4D200CFA3DE /* Main.storyboard */; };
 		18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D417235EE4D300CFA3DE /* Assets.xcassets */; };
 		18F9D41B235EE4D300CFA3DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D419235EE4D300CFA3DE /* LaunchScreen.storyboard */; };
+		F014EE4E2396AB5F00A3A479 /* NoteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F014EE4C2396AB5F00A3A479 /* NoteListTableViewCell.swift */; };
+		F014EE4F2396AB5F00A3A479 /* NoteListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F014EE4D2396AB5F00A3A479 /* NoteListTableViewCell.xib */; };
 		F0C409D2238196CD006DB926 /* weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C409D1238196CD006DB926 /* weather.swift */; };
 		F0C409D4238197E6006DB926 /* weather.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C409D3238197E6006DB926 /* weather.xib */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		3AA3AFC14B5D9F6C50D985B5 /* Pods_YourDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB800061A3C5EF93EA23C92 /* Pods-YourDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourDiary.release.xcconfig"; path = "Target Support Files/Pods-YourDiary/Pods-YourDiary.release.xcconfig"; sourceTree = "<group>"; };
 		F014EE4B2396860300A3A479 /* FSCalendar-bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-bridging-Header.h"; sourceTree = "<group>"; };
+		F014EE4C2396AB5F00A3A479 /* NoteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableViewCell.swift; sourceTree = "<group>"; };
+		F014EE4D2396AB5F00A3A479 /* NoteListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteListTableViewCell.xib; sourceTree = "<group>"; };
 		F0C409D1238196CD006DB926 /* weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather.swift; sourceTree = "<group>"; };
 		F0C409D3238197E6006DB926 /* weather.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = weather.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +121,8 @@
 				F0C409D1238196CD006DB926 /* weather.swift */,
 				18C33AB42383D17C0011FE45 /* feeling.xib */,
 				F0C409D3238197E6006DB926 /* weather.xib */,
+				F014EE4C2396AB5F00A3A479 /* NoteListTableViewCell.swift */,
+				F014EE4D2396AB5F00A3A479 /* NoteListTableViewCell.xib */,
 			);
 			path = YourDiary;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C33AB52383D17C0011FE45 /* feeling.xib in Resources */,
+				F014EE4F2396AB5F00A3A479 /* NoteListTableViewCell.xib in Resources */,
 				18F9D41B235EE4D300CFA3DE /* LaunchScreen.storyboard in Resources */,
 				18F9D418235EE4D300CFA3DE /* Assets.xcassets in Resources */,
 				F0C409D4238197E6006DB926 /* weather.xib in Resources */,
@@ -272,6 +279,7 @@
 				18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */,
 				F0C409D2238196CD006DB926 /* weather.swift in Sources */,
 				185B015A23716CEB00AF5A98 /* historyViewController.swift in Sources */,
+				F014EE4E2396AB5F00A3A479 /* NoteListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

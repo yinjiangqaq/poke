@@ -8,16 +8,14 @@
 
 import UIKit
 
-class calendarViewController: UIViewController ,FSCalendarDataSource,FSCalendarDelegate{
+class calendarViewController: UIViewController ,FSCalendarDataSource,FSCalendarDelegate,UITableViewDelegate,UITableViewDataSource{
     
-    //    fileprivate lazy var calendar : FSCalendar={
-    //        let calendar=FSCalendar.init(frame: CGRect.init(x:0,y:0,width: UIScreen.main.bounds.width,height: 300))
-    //        calendar.dataSource=self
-    //        calendar.delegate=self
-    //        return calendar
-    //    }()
     
+    @IBOutlet var topView: UIView!
+    @IBOutlet weak var noteListTableView: UITableView!
     @IBOutlet weak var calendar: FSCalendar!
+    
+    var calendars:Calendar = Calendar.current
     
     var noteList: [Note] = [Note]()
     
@@ -43,14 +41,16 @@ class calendarViewController: UIViewController ,FSCalendarDataSource,FSCalendarD
         return (NSKeyedUnarchiver.unarchiveObject(withFile: Note.ArchiveURL.path) as? [Note])
     }
     
-    var calendars:Calendar = Calendar.current
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initNoteList()
+        self.noteListTableView.backgroundColor=UIColor.clear
+        topView.backgroundColor = UIColor.init(patternImage: UIImage(named: "starrySky")!)
         
-        //        self.view.addSubview(calendar)
+        self.noteListTableView.register(UINib(nibName: "NoteListTableViewCell", bundle: nil), forCellReuseIdentifier: "NoteListTableViewCell")
+        
         
         // Do any additional setup after loading the view.
     }
@@ -69,31 +69,48 @@ class calendarViewController: UIViewController ,FSCalendarDataSource,FSCalendarD
                     if(n.day!==day){
                         print(n.weekday!)
                     }
-                    //                    else{
-                    //                        print("n.day is \(n.day),day is \(day)")
-                    //                    }
                 }
-                //                else{
-                //                    print("n.month is \(n.month),month is \(month)")
-                //                }
                 
             }
-            //            else{
-            //                print("n.year is \(n.year),year is \(year)")
-            //            }
         }
-        
-        
     }
     
-    /*
-     // MARK: - Navigation
-     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return noteList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:NoteListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NoteListTableViewCell",for: indexPath) as! NoteListTableViewCell
+        
+        cell.day.text=String(noteList[indexPath.row].day)
+        cell.month.text=String(noteList[indexPath.row].month)+"月"
+        cell.weekday.text=noteList[indexPath.row].weekday
+        cell.weatherImage.image=noteList[indexPath.row].weather
+        cell.feelingImage.image=noteList[indexPath.row].mood
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
+    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//
+//        }
+//    }
+    
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
      }
-     */
+    
     
 }
