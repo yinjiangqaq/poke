@@ -12,6 +12,10 @@ class personEditViewController: UIViewController ,UINavigationControllerDelegate
 
  
 
+    @IBAction func tap(_ sender: Any) {
+        tapphoto(sender)
+        
+    }
     @IBOutlet weak var touxiang: UIImageView!
     @IBOutlet weak var NICKNAME: UILabel!
     @IBOutlet weak var SIGN: UILabel!
@@ -21,6 +25,7 @@ class personEditViewController: UIViewController ,UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        touxiang.isUserInteractionEnabled = true
         // Do any additional setup after loading the view.
    
     }
