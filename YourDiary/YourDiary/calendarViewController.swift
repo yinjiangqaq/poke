@@ -55,7 +55,7 @@ class calendarViewController: UIViewController ,FSCalendarDataSource,FSCalendarD
         // Do any additional setup after loading the view.
     }
     
-    
+    //日历点击函数
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print("didSelet\(date)")
         var year = calendars.component(.year , from: date)
@@ -84,12 +84,21 @@ class calendarViewController: UIViewController ,FSCalendarDataSource,FSCalendarD
         return noteList.count
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectNote : Note = noteList[indexPath.row]
+        self.performSegue(withIdentifier: "showDetial", sender: selectNote)
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:NoteListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NoteListTableViewCell",for: indexPath) as! NoteListTableViewCell
         
         cell.day.text=String(noteList[indexPath.row].day)
         cell.month.text=String(noteList[indexPath.row].month)+"月"
         cell.weekday.text=noteList[indexPath.row].weekday
+        cell.noteContent.text=noteList[indexPath.row].noteContent
         cell.weatherImage.image=noteList[indexPath.row].weather
         cell.feelingImage.image=noteList[indexPath.row].mood
         
@@ -110,6 +119,17 @@ class calendarViewController: UIViewController ,FSCalendarDataSource,FSCalendarD
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
+        
+        let destinationVC = segue.destination as! diaryEditViewController
+        if segue.identifier == "showDetial"{
+            print("传送成功")
+            if let selectedNote = sender as? Note{
+                destinationVC.noteForEdit=selectedNote
+            }
+        }else{
+            print("传送失败")
+        }
+        
      }
     
     

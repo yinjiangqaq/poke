@@ -13,22 +13,24 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     var centerY : CGFloat = 0.0
     //键盘高度
     var keyboardHeight : CGFloat = 0.0
+    var noteForEdit: Note?
     
     var judge : Bool = false
     
-////////////////////图片
+    ////////////////////图片
     @IBOutlet weak var Image1: UIImageView!
     @IBOutlet weak var myFeeling: UIImageView!
     @IBOutlet weak var myWeather: UIImageView!
-  //////////////////
+    //////////////////
     
     
-////////////////////输入框
+    ////////////////////输入框
+    @IBOutlet weak var DiaryTitle: UITextField!
     @IBOutlet weak var DiaryContent: UITextField!
-////////////////////
+    ////////////////////
     
     
-////////////////////按钮及事件
+    ////////////////////按钮及事件
     @IBOutlet weak var AddFeeling: UIButton!
     @IBAction func AddFeelingButton(_ sender: Any) {
         let myAlert = feeling(frame: CGRect(x: 0 , y: 0 , width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height))
@@ -68,10 +70,10 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
         
         self.view.addSubview(myAlert)
     }
-///////////////////////////////////
+    ///////////////////////////////////
     
     
-//////////////////设置图片
+    //////////////////设置图片
     func setFeelingImage(ima : String){
         myFeeling.image = UIImage(named: ima)
     }
@@ -79,10 +81,10 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     func setWeatherImage(ima : String){
         myWeather.image = UIImage(named: ima)
     }
-//////////////////////////
+    //////////////////////////
     
     
-//////////////////////////上传图片
+    //////////////////////////上传图片
     @IBAction func tapPhoto(_ sender: Any ){
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
@@ -96,37 +98,40 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
         self.Image1.image = selectedImage
         dismiss(animated: true, completion: nil)
     }
-////////////////////////////////////
+    ////////////////////////////////////
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        DiaryContent.becomeFirstResponder()
+        DiaryTitle.becomeFirstResponder()
         
-//        centerY = DiaryContent.center.y
-//
-//
-//
-//        //追加键盘监听
-//        // 监听键盘弹出通知
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name:UIResponder.keyboardWillShowNotification,object: nil)
-//        // 监听键盘隐藏通知
-//        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillHide(notification:)),name: UIResponder.keyboardWillHideNotification, object: nil)
-//        
+        
+        self.DiaryContent.text=noteForEdit?.noteContent
+        
+        //        centerY = DiaryContent.center.y
+        //
+        //
+        //
+        //        //追加键盘监听
+        //        // 监听键盘弹出通知
+        //        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name:UIResponder.keyboardWillShowNotification,object: nil)
+        //        // 监听键盘隐藏通知
+        //        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillHide(notification:)),name: UIResponder.keyboardWillHideNotification, object: nil)
+        //
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-       
+        
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-/////////////////////键盘相关函数
+    /////////////////////键盘相关函数
     
     /// 监听键盘弹出
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -167,33 +172,33 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
         
     }
     
-//    func textFieldDidBeginEditing(textField: UITextField) {
-//        animateViewMoving(up: true, moveValue: 100)
-//    }
-//    func textFieldDidEndEditing(textField: UITextField) {
-//        animateViewMoving(up: false, moveValue: 100)
-//    }
-//
-//    func animateViewMoving (up:Bool, moveValue :CGFloat){
-//        var movementDuration:TimeInterval = 0.3
-//        var movement:CGFloat = ( up ? -moveValue : moveValue)
-//        UIView.beginAnimations( "animateView", context: nil)
-//        UIView.setAnimationBeginsFromCurrentState(true)
-//        UIView.setAnimationDuration(movementDuration )
-//        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
-//        UIView.commitAnimations()
-//    }
+    //    func textFieldDidBeginEditing(textField: UITextField) {
+    //        animateViewMoving(up: true, moveValue: 100)
+    //    }
+    //    func textFieldDidEndEditing(textField: UITextField) {
+    //        animateViewMoving(up: false, moveValue: 100)
+    //    }
+    //
+    //    func animateViewMoving (up:Bool, moveValue :CGFloat){
+    //        var movementDuration:TimeInterval = 0.3
+    //        var movement:CGFloat = ( up ? -moveValue : moveValue)
+    //        UIView.beginAnimations( "animateView", context: nil)
+    //        UIView.setAnimationBeginsFromCurrentState(true)
+    //        UIView.setAnimationDuration(movementDuration )
+    //        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+    //        UIView.commitAnimations()
+    //    }
     
     
-//
+    //
     deinit {
         // 删除键盘监听
         print("删除键盘监听")
         NotificationCenter.default.removeObserver(self)
     }
-
     
-///////////////////////////////
+    
+    ///////////////////////////////
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -207,14 +212,14 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
-
+    
 }
