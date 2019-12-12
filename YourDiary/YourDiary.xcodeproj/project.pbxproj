@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		099F22EA26C8A8AD90247434 /* Pods_YourDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA3AFC14B5D9F6C50D985B5 /* Pods_YourDiary.framework */; };
+		18374C63239FA1350035D11C /* extensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18374C62239FA1350035D11C /* extensionViewController.swift */; };
+		18374C65239FA15B0035D11C /* extension2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18374C64239FA15B0035D11C /* extension2ViewController.swift */; };
+		18374C67239FA1DC0035D11C /* username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18374C66239FA1DC0035D11C /* username.swift */; };
+		18374C69239FA1F80035D11C /* usersign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18374C68239FA1F80035D11C /* usersign.swift */; };
 		185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B014B237157E200AF5A98 /* myTabBarController.swift */; };
 		185B015223716C5600AF5A98 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015123716C5600AF5A98 /* loginViewController.swift */; };
 		185B015423716C7600AF5A98 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B015323716C7600AF5A98 /* registerViewController.swift */; };
@@ -35,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		0B7B1B8DDADDD3380399F2C4 /* Pods-YourDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourDiary.debug.xcconfig"; path = "Target Support Files/Pods-YourDiary/Pods-YourDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		18374C62239FA1350035D11C /* extensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionViewController.swift; sourceTree = "<group>"; };
+		18374C64239FA15B0035D11C /* extension2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension2ViewController.swift; sourceTree = "<group>"; };
+		18374C66239FA1DC0035D11C /* username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = username.swift; sourceTree = "<group>"; };
+		18374C68239FA1F80035D11C /* usersign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersign.swift; sourceTree = "<group>"; };
 		185B014B237157E200AF5A98 /* myTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabBarController.swift; sourceTree = "<group>"; };
 		185B015123716C5600AF5A98 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		185B015323716C7600AF5A98 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +123,11 @@
 				185B015723716CC700AF5A98 /* personalViewController.swift */,
 				185B015923716CEB00AF5A98 /* historyViewController.swift */,
 				185B016123716E9F00AF5A98 /* personEditViewController.swift */,
+				18374C62239FA1350035D11C /* extensionViewController.swift */,
+				18374C64239FA15B0035D11C /* extension2ViewController.swift */,
 				185B0163237172B200AF5A98 /* user.swift */,
+				18374C66239FA1DC0035D11C /* username.swift */,
+				18374C68239FA1F80035D11C /* usersign.swift */,
 				185B015D23716DC700AF5A98 /* diaryEditViewController.swift */,
 				18C33AB62383D1A10011FE45 /* feeling.swift */,
 				F0C409D1238196CD006DB926 /* weather.swift */,
@@ -264,11 +276,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E89170238D220500A9D06C /* NoteTableViewController.swift in Sources */,
+				18374C67239FA1DC0035D11C /* username.swift in Sources */,
 				185B015223716C5600AF5A98 /* loginViewController.swift in Sources */,
 				185B014C237157E200AF5A98 /* myTabBarController.swift in Sources */,
+				18374C65239FA15B0035D11C /* extension2ViewController.swift in Sources */,
 				185B015423716C7600AF5A98 /* registerViewController.swift in Sources */,
 				18C33AB72383D1A10011FE45 /* feeling.swift in Sources */,
 				18E8916E238D21F400A9D06C /* NoteTableViewCell.swift in Sources */,
+				18374C69239FA1F80035D11C /* usersign.swift in Sources */,
 				185B015623716CB400AF5A98 /* calendarViewController.swift in Sources */,
 				185B015E23716DC700AF5A98 /* diaryEditViewController.swift in Sources */,
 				185B015823716CC700AF5A98 /* personalViewController.swift in Sources */,
@@ -277,6 +292,7 @@
 				18C49681239638A300598502 /* note.swift in Sources */,
 				185B0164237172B200AF5A98 /* user.swift in Sources */,
 				18F9D411235EE4D200CFA3DE /* AppDelegate.swift in Sources */,
+				18374C63239FA1350035D11C /* extensionViewController.swift in Sources */,
 				F0C409D2238196CD006DB926 /* weather.swift in Sources */,
 				185B015A23716CEB00AF5A98 /* historyViewController.swift in Sources */,
 				F014EE4E2396AB5F00A3A479 /* NoteListTableViewCell.swift in Sources */,
