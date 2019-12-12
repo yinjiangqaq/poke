@@ -36,6 +36,14 @@ class NoteTableViewController: UITableViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initNoteList()
@@ -182,29 +190,28 @@ class NoteTableViewController: UITableViewController {
     //item页面中保存按钮调用的方法
     @IBAction func saveToList(segue: UIStoryboardSegue){
 //        if let addNoteVC = segue.source as? diaryEditViewController{
-        if let addNoteVC = segue.source as? NoteItemViewController{
-            if let addNote = addNoteVC.noteForEdit{
-                //如果是修改已有的日记项，则保存新的值
-                //先在数组中修改数据，再传到表格中
-                if let selectedIndexPath = tableView.indexPathForSelectedRow{
-                    notes[(selectedIndexPath as NSIndexPath).row] = addNote
-                    tableView.reloadRows(at: [selectedIndexPath], with: .none)
+        if segue.identifier == "saveToList1"{
+            if let addNoteVC = segue.source as? NoteItemViewController{
+                if let addNote = addNoteVC.noteForEdit{
+                    //如果是修改已有的日记项，则保存新的值
+                    //先在数组中修改数据，再传到表格中
+                    let selectedIndexPath = tableView.indexPathForSelectedRow
+                    notes[(selectedIndexPath as! NSIndexPath).row] = addNote
+                    tableView.reloadRows(at: [selectedIndexPath!], with: .none)
+                    
                 }
-                    //否则（新的日记），
-                    //如果新日记文本部分不为空，则增加一条值
-                    //如果为空，就无任何动作
-                    //先在数组中增加数据，再在表格中增加
-                else{
+            }
+        }
+        else {
+            if let addNoteVC = segue.source as? diaryEditViewController{
+                if let addNote = addNoteVC.noteForEdit{
                     if addNote.noteContent != "" && addNote.noteContent != nil{
                         notes.append(addNote)
                         let newIndexPath = IndexPath(row: notes.count-1, section:0)
                         tableView.insertRows(at: [newIndexPath], with: .automatic)
                     }
                 }
-                print("NoteTableViewController saveToList note.content is \(addNote.noteContent)")
-                
             }
-            
         }
         
         //持久化保存数据

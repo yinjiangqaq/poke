@@ -106,7 +106,13 @@ class calendarViewController: UIViewController ,FSCalendarDataSource,FSCalendarD
         saveNoteFile()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        noteListTableView.reloadData()
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        noteListTableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
