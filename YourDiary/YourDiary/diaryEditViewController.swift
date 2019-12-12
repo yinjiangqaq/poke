@@ -29,6 +29,10 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     @IBOutlet weak var DiaryContent: UITextField!
     ////////////////////
     
+    @IBOutlet weak var DiaryYear: UILabel!
+    @IBOutlet weak var DiaryMonth: UILabel!
+    @IBOutlet weak var DiaryDay: UILabel!
+    @IBOutlet weak var DiaryWeekday: UILabel!
     
     ////////////////////按钮及事件
     @IBOutlet weak var AddFeeling: UIButton!
@@ -104,10 +108,16 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DiaryTitle.becomeFirstResponder()
+        DiaryContent.becomeFirstResponder()
         
-        
+        self.DiaryYear.text=String(noteForEdit!.year)
+        self.DiaryMonth.text=String(noteForEdit!.month)
+        self.DiaryDay.text=String(noteForEdit!.day)
+        self.DiaryWeekday.text=noteForEdit!.weekday
         self.DiaryContent.text=noteForEdit?.noteContent
+        self.myWeather.image=noteForEdit?.weather
+        self.myFeeling.image=noteForEdit?.mood
+//        self.Image1.image=noteForEdit!.noteImages?[0]
         
         //        centerY = DiaryContent.center.y
         //
@@ -202,9 +212,15 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "saveTheNote"){
+        if(segue.identifier == "saveToList"){
+            noteForEdit?.noteContent=self.DiaryContent.text
+            noteForEdit?.weather=self.myWeather.image
+            noteForEdit?.mood=self.myFeeling.image
             
-        }else if(segue.identifier == "cancelTheNote"){
+//            var noteImageList : [UIImage] = [UIImage]()
+//            noteImageList.append(Image1.image!)
+//            noteForEdit?.noteImages?=noteImageList
+        }else if(segue.identifier == "cancelToList"){
             
         }
     }
