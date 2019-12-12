@@ -28,13 +28,18 @@ class NoteTableViewController: UITableViewController {
     func initNoteList(){
         let temp = loadNoteFile()
         //??表示可选且若temp为空使用默认值[Note]()
-        notes = temp ?? [Note]()
+        if(temp == nil){
+            notes.append(Note(year:2017, month:3 , day:20, weekday:"星期一", noteContent:"春江潮水连海平，海上明月共潮生\n春江潮水连海平，海上明月共潮生\n春江潮水连海平，海上明月共潮生\n春江潮水连海平，海上明月共潮生", noteImages:nil, mood:nil, weather:nil))
+            //mood:UIImage(named: "logo"), weather:UIImage(named: "liulan")
+        }else{
+            notes = temp ?? [Note]()
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initNoteList()
-        self.tableView.rowHeight = 80
+        self.tableView.rowHeight = 100
         let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = item;
         // Uncomment the following line to preserve selection between presentations
@@ -99,7 +104,7 @@ class NoteTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
 
     /*
@@ -124,10 +129,11 @@ class NoteTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        //声明一个目标页面的代理
-        let descriptionVC = segue.destination as! NoteItemViewController
+        
         //如果跳转标识符是showDetail，则将当前cell的对应数据传给目标页面
         if(segue.identifier == "showItem"){
+            //声明一个目标页面的代理
+            let descriptionVC = segue.destination as! NoteItemViewController
             if let selectedCell = sender as? UITableViewCell{
                 let indexPath = tableView.indexPath(for: selectedCell)!
                 let selectedNote = notes[(indexPath as NSIndexPath).row]
@@ -137,6 +143,8 @@ class NoteTableViewController: UITableViewController {
         }
             //否则，创建一个新的空白对象传给目标页面
         else{
+            //声明一个目标页面的代理
+            let descriptionVC = segue.destination as! diaryEditViewController
             let calendar:Calendar = Calendar.current
             let now = Date()
             let yearValue = calendar.component(.year, from: now)
@@ -146,19 +154,19 @@ class NoteTableViewController: UITableViewController {
             var weekdayStr:String
             switch(weekdayValue){
             case 1:
-                weekdayStr = "周日"
+                weekdayStr = "星期日"
             case 2:
-                weekdayStr = "周一"
+                weekdayStr = "星期一"
             case 3:
-                weekdayStr = "周二"
+                weekdayStr = "星期二"
             case 4:
-                weekdayStr = "周三"
+                weekdayStr = "星期三"
             case 5:
-                weekdayStr = "周四"
+                weekdayStr = "星期四"
             case 6:
-                weekdayStr = "周五"
+                weekdayStr = "星期五"
             case 7:
-                weekdayStr = "周六"
+                weekdayStr = "星期六"
             default:
                 return
             }
@@ -173,6 +181,7 @@ class NoteTableViewController: UITableViewController {
     
     //item页面中保存按钮调用的方法
     @IBAction func saveToList(segue: UIStoryboardSegue){
+//        if let addNoteVC = segue.source as? diaryEditViewController{
         if let addNoteVC = segue.source as? NoteItemViewController{
             if let addNote = addNoteVC.noteForEdit{
                 //如果是修改已有的日记项，则保存新的值
@@ -192,8 +201,12 @@ class NoteTableViewController: UITableViewController {
                         tableView.insertRows(at: [newIndexPath], with: .automatic)
                     }
                 }
+                print("NoteTableViewController saveToList note.content is \(addNote.noteContent)")
+                
             }
+            
         }
+        
         //持久化保存数据
         saveNoteFile()
     }

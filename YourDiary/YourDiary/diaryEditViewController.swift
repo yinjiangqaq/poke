@@ -25,7 +25,6 @@ class diaryEditViewController: UIViewController , UINavigationControllerDelegate
     
     
     ////////////////////输入框
-    @IBOutlet weak var DiaryTitle: UITextField!
     @IBOutlet weak var DiaryContent: UITextField!
     ////////////////////
     
