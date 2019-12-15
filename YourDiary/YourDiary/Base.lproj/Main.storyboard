@@ -633,10 +633,10 @@
                                     <constraint firstAttribute="height" constant="128" id="PjQ-P1-P9H"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyDiary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyU-80-QjK">
-                                <rect key="frame" x="162" y="325" width="90" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Diary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyU-80-QjK">
+                                <rect key="frame" x="152" y="325" width="110.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-2Y-Bk6">
@@ -702,6 +702,9 @@
                                 <state key="normal" title="找回密码">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="H4W-Za-pCa" kind="showDetail" id="x1L-92-lxX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431372549018" green="0.74509803921568629" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -775,19 +778,33 @@
                                     <color key="titleColor" red="0.37350541353225708" green="0.51338547468185425" blue="0.85779815912246704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="2YZ-w2-UNi" kind="show" id="htK-dI-SjS"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-FI-GDZ">
                                 <rect key="frame" x="111" y="193" width="192" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdo-dX-qif">
+                                <rect key="frame" x="115.5" y="735" width="183" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="mJV-W4-woV"/>
+                                    <constraint firstAttribute="width" constant="183" id="xkd-vx-LeA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleColor" red="0.37350541349999999" green="0.51338547469999996" blue="0.85779815910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fHA-kp-n78" kind="showDetail" id="IMP-sm-ajU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.49011832475662231" green="0.70705264806747437" blue="0.9828532338142395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mgY-2W-vTb" firstAttribute="top" secondItem="QBA-B6-lmu" secondAttribute="bottom" constant="18" id="2wi-Le-GZh"/>
                             <constraint firstItem="Vgd-Sn-lnY" firstAttribute="top" secondItem="mgY-2W-vTb" secondAttribute="bottom" constant="17" id="5pw-7P-YWK"/>
+                            <constraint firstItem="qdo-dX-qif" firstAttribute="centerX" secondItem="vKH-bW-8jJ" secondAttribute="centerX" id="8Jb-oX-UnW"/>
                             <constraint firstItem="uOT-Ko-TXj" firstAttribute="trailing" secondItem="xxs-bL-k0g" secondAttribute="trailing" constant="93" id="8w9-qd-GlL"/>
                             <constraint firstItem="SSd-OJ-GjC" firstAttribute="leading" secondItem="uOT-Ko-TXj" secondAttribute="leading" constant="93" id="A58-cs-EWZ"/>
                             <constraint firstItem="Vgd-Sn-lnY" firstAttribute="leading" secondItem="uOT-Ko-TXj" secondAttribute="leading" constant="93" id="Fin-5E-zhF"/>
@@ -796,6 +813,7 @@
                             <constraint firstItem="JHr-ar-pOa" firstAttribute="leading" secondItem="uOT-Ko-TXj" secondAttribute="leading" constant="116" id="JLo-Sc-UgN"/>
                             <constraint firstItem="uOT-Ko-TXj" firstAttribute="trailing" secondItem="Vgd-Sn-lnY" secondAttribute="trailing" constant="93" id="K5Y-z9-ira"/>
                             <constraint firstItem="uOT-Ko-TXj" firstAttribute="bottom" secondItem="JHr-ar-pOa" secondAttribute="bottom" constant="147" id="KnH-n5-idY"/>
+                            <constraint firstItem="qdo-dX-qif" firstAttribute="top" secondItem="JHr-ar-pOa" secondAttribute="bottom" constant="20" id="L57-6Y-q9c"/>
                             <constraint firstItem="Vgd-Sn-lnY" firstAttribute="top" secondItem="xxs-bL-k0g" secondAttribute="bottom" constant="17" id="Nis-sw-CmL"/>
                             <constraint firstItem="Vgd-Sn-lnY" firstAttribute="top" secondItem="xxs-bL-k0g" secondAttribute="bottom" constant="17" id="RcK-gF-nkw"/>
                             <constraint firstItem="uOT-Ko-TXj" firstAttribute="trailing" secondItem="SSd-OJ-GjC" secondAttribute="trailing" constant="93" id="U1u-35-KRm"/>
@@ -813,7 +831,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFB-rK-x2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="958"/>
+            <point key="canvasLocation" x="728" y="-563"/>
         </scene>
         <!--register-->
         <scene sceneID="6Ch-Mi-azG">
@@ -830,8 +848,8 @@
                                     <constraint firstAttribute="height" constant="128" id="iRR-ne-cVn"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyDiary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cka-YH-LBp">
-                                <rect key="frame" x="162" y="307" width="90" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Diary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cka-YH-LBp">
+                                <rect key="frame" x="152" y="307" width="110.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1127,8 +1145,7 @@
         <image name="超级截屏_20191126_144515_mh1574750824695.jpg" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kv2-Vq-GZy"/>
-        <segue reference="htK-dI-SjS"/>
-        <segue reference="TkS-3o-OWc"/>
+        <segue reference="pbQ-vU-TPS"/>
+        <segue reference="0Q1-3I-Y35"/>
     </inferredMetricsTieBreakers>
 </document>
